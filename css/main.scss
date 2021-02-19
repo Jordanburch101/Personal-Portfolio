@@ -1,0 +1,98 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors
+$colors: (
+    primary: #636FA4,
+    secondary: #E8CBC0,
+    accent: #FFAF7B,
+    bg: #2E2E2E,
+    bg-dark: #2D2C2C,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+$font-primary: 'Poppins', sans-serif;
+
+// breakpoints
+$break-med: 768px;
+$break-lrg: 1024px;
+$break-sup: 1400px;
+// ======================================
+//  Base
+// ======================================
+* {
+    font-family: $font-primary;
+}
+// ======================================
+//  Header
+// ======================================
+.navbar {
+    background-color: color(bg-dark);
+    
+}
+
+.navName {
+    &-first {
+        color: #fff;
+    }
+    &-start {
+        color: color(accent);
+    }
+    &-last {
+        color: color(primary);
+    }
+    &-end {
+        color: color(accent);
+    }
+}
+// ======================================
+//  Hero Section
+// ======================================
+
+.jumbotron {
+    height: 728px;
+    width: 100%;
+    background-color: color(bg);
+    color: #fff;
+    .hero {
+        max-width: 375px;
+        padding-top: 4em;
+        margin-left: .5em;
+        margin-right: .5em;
+        &-text {
+            font-family: $font-primary;
+
+            font-size: 2.2em;
+            line-height: 1.8em;
+            letter-spacing: .3em;
+            
+        }
+        &-span {
+            color: color(accent);
+        }
+        &-cta {
+            margin-top: 1.5em;
+        }
+        &-buttons {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}
+
+.button {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 1em;
+    &-primary {
+        background-color: color(primary);
+        color: #fff;
+    }
+
+}

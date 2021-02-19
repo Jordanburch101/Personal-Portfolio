@@ -1,0 +1,75 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background-color: #2D2C2C;
+}
+
+.navName-first {
+  color: #fff;
+}
+
+.navName-start {
+  color: #FFAF7B;
+}
+
+.navName-last {
+  color: #636FA4;
+}
+
+.navName-end {
+  color: #FFAF7B;
+}
+
+.jumbotron {
+  height: 728px;
+  width: 100%;
+  background-color: #2E2E2E;
+  color: #fff;
+}
+
+.jumbotron .hero {
+  max-width: 375px;
+  padding-top: 4em;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.jumbotron .hero-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2em;
+  line-height: 1.8em;
+  letter-spacing: .3em;
+}
+
+.jumbotron .hero-span {
+  color: #FFAF7B;
+}
+
+.jumbotron .hero-cta {
+  margin-top: 1.5em;
+}
+
+.jumbotron .hero-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.button {
+  width: 140px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 1em;
+}
+
+.button-primary {
+  background-color: #636FA4;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
