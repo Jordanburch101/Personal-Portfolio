@@ -199,4 +199,29 @@ ul.dropdown-menu.show {
 .feature-preview img {
   border-radius: 2px;
 }
+
+.projectsContainer {
+  height: 2000px;
+  background: #2E2E2E;
+}
+
+.projects-title {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.projects-title-start {
+  color: #FFAF7B;
+}
+
+.projects-title-end {
+  color: #FFAF7B;
+}
+
+.projects {
+  width: 90%;
+  margin: auto;
+}
 /*# sourceMappingURL=main.css.map */

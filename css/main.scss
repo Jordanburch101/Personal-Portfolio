@@ -198,3 +198,30 @@ ul.dropdown-menu.show{
     }
 
 }
+
+// ======================================
+//  Projects Section
+// =====================================
+.projectsContainer {
+    height: 2000px;
+    background: color(bg);
+}
+
+.projects-title {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    &-start {
+        color: color(accent);
+    }
+    
+    &-end {
+        color: color(accent);
+    }
+}
+
+.projects {
+    width: 90%;
+    margin: auto;
+}
