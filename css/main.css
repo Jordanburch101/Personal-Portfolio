@@ -1,5 +1,7 @@
 * {
   font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -69,8 +71,8 @@ ul.dropdown-menu.show {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   justify-items: center;
-  z-index: 100;
   position: relative;
+  height: 800px;
 }
 
 .hero h1 {
@@ -94,15 +96,27 @@ ul.dropdown-menu.show {
   margin-top: 2.5em;
 }
 
-.hero-buttons .button {
+.hero-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-contnet {
+  z-index: 100;
+}
+
+.button {
   width: 140px;
   height: 40px;
   border-radius: 20px;
   border: none;
-  margin-right: 1em;
 }
 
-.hero-buttons .button-primary {
+.button-primary {
   background-color: #636FA4;
   color: #fff;
 }
@@ -112,7 +126,77 @@ ul.dropdown-menu.show {
 }
 
 .feature {
-  height: 600px;
-  background-color: #E8CBC0;
+  background: #E8CBC0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e8cbc0), to(#636fa4));
+  background: linear-gradient(180deg, #e8cbc0 0%, #636fa4 100%);
+  margin-top: -1em;
+  height: 900px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.feature-content {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.feature-title {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  font-size: 2.3em;
+  font-weight: 400;
+  letter-spacing: .18em;
+  line-height: 2em;
+  color: white;
+}
+
+.feature-subtitle {
+  color: #636FA4;
+  margin-bottom: 0;
+}
+
+.feature-title2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: .15em;
+}
+
+.feature-description {
+  font-size: .8em;
+}
+
+.feature-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feature-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2em;
+  width: auto;
+}
+
+.feature-preview img {
+  border-radius: 2px;
 }
 /*# sourceMappingURL=main.css.map */
