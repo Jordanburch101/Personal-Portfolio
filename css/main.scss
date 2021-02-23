@@ -33,6 +33,20 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+.button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    &-primary {
+        background-color: color(primary);
+        color: #fff;
+    }
+}
+
+
 // ======================================
 //  Nav Section
 // ======================================
@@ -84,14 +98,13 @@ ul.dropdown-menu.show{
 //  Hero Section
 // ======================================
 .hero {
-    background-color: color(bg);
+    background: color(bg);
     color: #fff;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     justify-items: center;  
     position: relative;
-    height: 800px;
     h1 {
         margin-top: 1em;
         font-size: 2.3em;
@@ -119,20 +132,12 @@ ul.dropdown-menu.show{
     z-index: 100;
 }
 
-.button {
-    width: 140px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    &-primary {
-        background-color: color(primary);
-        color: #fff;
-    }
-    
-}
-
 
 .hero-svg {
+    background: rgb(46,46,46);
+    background: linear-gradient(150deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%); 
+    display: flex;
+    justify-content: center;
     svg {
         width: 350px;
         
@@ -147,7 +152,6 @@ ul.dropdown-menu.show{
 .feature {
     background: color(secondary);
     background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
-    margin-top: -1em;
     height: 900px;
     display: grid;
     grid-template-columns: 100%;
@@ -161,7 +165,7 @@ ul.dropdown-menu.show{
         margin: auto;
     }
     &-title {
-        margin-top: 1.5em;
+       margin-top: -3em;
         margin-bottom: 1.5em;
         font-size: 2.3em;
         font-weight: 400;
@@ -203,7 +207,6 @@ ul.dropdown-menu.show{
 //  Projects Section
 // =====================================
 .projects {
-    height: 2000px;
     background: color(bg);
 }
 
@@ -235,6 +238,7 @@ ul.dropdown-menu.show{
 
 .projects-card {
     width: 90%;
+    height: 550px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -252,13 +256,27 @@ ul.dropdown-menu.show{
 .project {
     &-content {
         color: #fff;
+        font-size: .8em;
     }
     &-buttons {
         display: flex; 
         width: 100%;
         justify-content: space-between;
+        font-size: 1.2em;
     }
     &-subtitle {
+        display: flex;
         color: color(accent);
+        font-weight: bold;
+        letter-spacing: .35em;
+        margin-top: 2.5em;
+    }
+    &-title {
+        font-size: 2em;
+        font-weight: 400;
+        letter-spacing: .15em;
+    }
+    &-description {
+        line-height: 2.2em;
     }
 }
