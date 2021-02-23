@@ -34,7 +34,7 @@ body {
     margin: 0;
 }
 // ======================================
-//  Nav
+//  Nav Section
 // ======================================
 
 .nav-container {
@@ -202,26 +202,63 @@ ul.dropdown-menu.show{
 // ======================================
 //  Projects Section
 // =====================================
-.projectsContainer {
+.projects {
     height: 2000px;
     background: color(bg);
 }
 
-.projects-title {
-    width: 40%;
-    margin: auto;
+.projects-intro {
+    width: 80%;
+    padding-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     color: white;
-    &-start {
-        color: color(accent);
+    &-title {
+        font-size: 2em;
+        font-weight: 400;
+        letter-spacing: .35em;
+        &-start {
+            color: color(accent);
+        }
+        
+        &-end {
+            color: color(accent);
+        }
     }
-    
-    &-end {
-        color: color(accent);
+    p {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        font-size: .7em;
     }
 }
 
-.projects {
+.projects-card {
     width: 90%;
-    margin: auto;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 350px;
+    grid-gap: 2em;
+
+    .carousel-inner {
+        border-radius: 2px;
+    }
+}
+
+.project {
+    &-content {
+        color: #fff;
+    }
+    &-buttons {
+        display: flex; 
+        width: 100%;
+        justify-content: space-between;
+    }
+    &-subtitle {
+        color: color(accent);
+    }
 }

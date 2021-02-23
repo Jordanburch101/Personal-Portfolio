@@ -154,12 +154,7 @@
 
             </div>
             <div class="feature-preview">
-                <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
+                <div id="featureCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
@@ -171,11 +166,11 @@
                         <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
                       </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel"  data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel"  data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
@@ -186,16 +181,65 @@
     <!-- /Featured section -->
 
     <!-- Projects -->
-    <section class="projectsContainer">
-        
-        <div class="projects">
-            <div class="projects-intro">
-                <h1 class="projects-title"><span class="projects-title-start">&lt;/</span>Projects<span class="projects-title-end">&gt;</span></h1>
-            </div>
-            <div class="projects-card">
+    <section class="projects">
+        <!-- Projects intro -->
+        <div class="projects-intro">
+            <h1 class="projects-intro-title"><span class="projects-intro-title-start">&lt;/</span>Projects<span class="projects-intro-title-end">&gt;</span></h1>
+            <p>See what I've been working on..</p>
+            <a href="https://github.com/Jordanburch101">
+                <svg xmlns="http://www.w3.org/2000/svg" width="58.204" height="46.565" viewBox="0 0 58.204 46.565">
+                    <path id="Icon_awesome-github-alt" data-name="Icon awesome-github-alt" d="M22.566,36.6c0,2.534-1.322,6.681-4.45,6.681s-4.45-4.147-4.45-6.681,1.322-6.681,4.45-6.681,4.45,4.147,4.45,6.681ZM58.2,30.474c0,3.868-.388,7.967-2.122,11.52-4.6,9.288-17.231,9.07-26.277,9.07-9.191,0-22.578.327-27.356-9.07A25.955,25.955,0,0,1,0,30.474,20.853,20.853,0,0,1,5.032,16.7,18.982,18.982,0,0,1,4.1,10.781c0-2.607.594-3.917,1.77-6.281,5.493,0,9.01,1.091,13.193,4.365A46.447,46.447,0,0,1,29.818,7.653a41.829,41.829,0,0,1,9.749,1.116C43.69,5.531,47.206,4.5,52.638,4.5c1.188,2.365,1.77,3.674,1.77,6.281a18.715,18.715,0,0,1-.934,5.845A20.893,20.893,0,0,1,58.2,30.474Zm-7.8,6.124c0-5.323-3.238-10.016-8.913-10.016a49.856,49.856,0,0,0-6.79.728,35.629,35.629,0,0,1-5.469.388,35.847,35.847,0,0,1-5.469-.388,49.048,49.048,0,0,0-6.79-.728c-5.675,0-8.913,4.693-8.913,10.016,0,10.647,9.749,12.284,18.237,12.284h5.845C40.67,48.881,50.407,47.256,50.407,36.6ZM40.391,29.916c-3.128,0-4.45,4.147-4.45,6.681s1.322,6.681,4.45,6.681,4.45-4.147,4.45-6.681S43.52,29.916,40.391,29.916Z" transform="translate(0 -4.5)" fill="#fff"/>
+                </svg>  
+            </a>
+        </div>
+        <!-- /Projects intro -->
 
+
+        <div class="projects-card">
+            
+            <div id="projectCarousel0" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel0"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel0"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="project-content">
+                <div class="project-buttons">
+                    <button class="button button-secondary" type="button">View Live</button>
+                    <button class="button button-primary" type="button">View Code</button>
+                </div>
+                <p class="project-subtitle">Latest Project</p>
+                <h2 class="project-title">WebApp Dashboard
+                    <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="51.063" height="51.063" viewBox="0 0 51.063 51.063">
+                    <path id="Icon_material-dashboard" data-name="Icon material-dashboard" d="M4.5,32.868H27.194V4.5H4.5Zm0,22.694H27.194V38.542H4.5Zm28.368,0H55.563V27.194H32.868Zm0-51.063V21.521H55.563V4.5Z" transform="translate(-4.5 -4.5)" fill="#2e2e2e"/>
+                    </svg>
+                    </span>
+                </h2>
+                <p class="project-description">This Web application uses JavaScript, CSS, and HTML to deliver an informative and responsive 
+                    Dashboard that is mobile-first in design. 
+                    It uses chart.js to deliver reactive charts & graphs that respond to different time settings.
+                </p>
+                <p>Links to Project:</p>     
             </div>
         </div>
+            
     </section>
 
     <!-- /Projects -->
