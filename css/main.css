@@ -298,4 +298,31 @@ ul.dropdown-menu.show {
 .project-description {
   line-height: 2.2em;
 }
+
+.aboutMe {
+  color: #fff;
+}
+
+.aboutMe-title {
+  background: #2e2e2e;
+  background: linear-gradient(170deg, #2e2e2e 55%, #e8cbc0 55%);
+  height: 400px;
+  margin-top: -4em;
+  margin-bottom: 0;
+  padding-top: 300px;
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: .25em;
+}
+
+.aboutMe-content {
+  background: #E8CBC0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e8cbc0), to(#636fa4));
+  background: linear-gradient(180deg, #e8cbc0 0%, #636fa4 100%);
+  margin-bottom: 0;
+}
+
+.aboutMe-description {
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=main.css.map */

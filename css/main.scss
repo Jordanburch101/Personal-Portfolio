@@ -208,6 +208,7 @@ ul.dropdown-menu.show{
 // =====================================
 .projects {
     background: color(bg);
+    // padding-bottom: 4em;
 }
 
 .projects-intro {
@@ -278,5 +279,32 @@ ul.dropdown-menu.show{
     }
     &-description {
         line-height: 2.2em;
+    }
+}
+
+// ======================================
+//  About me Section
+// =====================================
+
+.aboutMe {
+    color: #fff;
+    &-title {
+        background: rgb(46,46,46);
+        background: linear-gradient(170deg, rgba(46,46,46,1) 55%, rgba(232,203,192,1) 55%); 
+        height: 400px;
+        margin-top: -4em;
+        margin-bottom: 0;
+        padding-top: 300px;
+        text-align: center;
+        font-size: 3em;
+        letter-spacing: .25em;
+    }
+    &-content {
+        background: color(secondary);
+        background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+        margin-bottom: 0;
+    }
+    &-description {
+        margin-bottom: 0;
     }
 }
