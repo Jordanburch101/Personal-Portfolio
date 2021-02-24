@@ -46,6 +46,26 @@ body {
     }
 }
 
+.butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    &-primary {
+        background: color(primary);
+    }
+    &-secondary {
+        background: #fff;
+        color: color(bg);
+    }
+}
+
 
 // ======================================
 //  Nav Section
@@ -208,7 +228,10 @@ ul.dropdown-menu.show{
 // =====================================
 .projects {
     background: color(bg);
-    // padding-bottom: 4em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2em;
 }
 
 .projects-intro {
@@ -243,12 +266,9 @@ ul.dropdown-menu.show{
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     max-width: 350px;
-    grid-gap: 2em;
-
     .carousel-inner {
         border-radius: 2px;
     }
@@ -270,7 +290,8 @@ ul.dropdown-menu.show{
         color: color(accent);
         font-weight: bold;
         letter-spacing: .35em;
-        margin-top: 2.5em;
+        margin-top: 2em;
+        margin-bottom: .5em;
     }
     &-title {
         font-size: 2em;
