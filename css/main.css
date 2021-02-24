@@ -307,22 +307,61 @@ ul.dropdown-menu.show {
   background: #2e2e2e;
   background: linear-gradient(170deg, #2e2e2e 55%, #e8cbc0 55%);
   height: 400px;
-  margin-top: -4em;
+  margin-top: -3em;
   margin-bottom: 0;
   padding-top: 300px;
+  padding-bottom: 2em;
   text-align: center;
   font-size: 3em;
   letter-spacing: .25em;
 }
 
-.aboutMe-content {
+.aboutMe-container {
   background: #E8CBC0;
   background: -webkit-gradient(linear, left top, left bottom, from(#e8cbc0), to(#636fa4));
   background: linear-gradient(180deg, #e8cbc0 0%, #636fa4 100%);
-  margin-bottom: 0;
+  text-align: center;
+}
+
+.aboutMe-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1em;
+  justify-items: center;
+  width: 95%;
+  max-width: 350px;
+  padding-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutMe-description {
   margin-bottom: 0;
+  font-size: .9em;
+  max-width: 400px;
+}
+
+.aboutMe-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+  list-style-type: none;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.aboutMe img {
+  width: 250px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */

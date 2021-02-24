@@ -292,19 +292,48 @@ ul.dropdown-menu.show{
         background: rgb(46,46,46);
         background: linear-gradient(170deg, rgba(46,46,46,1) 55%, rgba(232,203,192,1) 55%); 
         height: 400px;
-        margin-top: -4em;
+        margin-top: -3em;
         margin-bottom: 0;
         padding-top: 300px;
+        padding-bottom: 2em;
         text-align: center;
         font-size: 3em;
         letter-spacing: .25em;
     }
-    &-content {
+    &-container {
         background: color(secondary);
         background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
-        margin-bottom: 0;
+        text-align: center;
+    }
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1em;
+        justify-items: center;
+        width: 95%;
+        max-width: 350px;
+        padding-top: 3em;
+        margin-left: auto;
+        margin-right: auto;
     }
     &-description {
         margin-bottom: 0;
+        font-size: .9em;
+        max-width: 400px;
+    }
+    &-links {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        list-style-type: none;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+    img {
+        width:250px;
+        border-radius: 5px;
     }
 }
