@@ -335,6 +335,7 @@ ul.dropdown-menu.show{
     img {
         width:250px;
         border-radius: 5px;
+        mix-blend-mode: luminosity;
     }
 }
 
@@ -342,7 +343,7 @@ ul.dropdown-menu.show{
     background: rgba(41, 41, 41, 0.164) ;
     border-radius: 30px;
     width: 80%;
-    max-width: 440px;
+    max-width: 400px;
     margin-top: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -353,10 +354,24 @@ ul.dropdown-menu.show{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        h2 {
+            font-size: 2.5em;
+            letter-spacing: .15em;
+            margin-top: 1em;
+        }
         ul {
             width: 80%;
             list-style: none;
+            li {
+                display: flex;
+                margin-bottom: 1em;
+                align-items: center;
+                p {
+                    margin: 0;
+                }
+            }
             img {
+                margin-right: 2em;
                 width: 40px;
                 mix-blend-mode: lighten;
             }
@@ -365,6 +380,9 @@ ul.dropdown-menu.show{
             width: 80%;
             font-size: .8em;
         }
+    }
+    &-description {
+        margin-bottom: 2em;
     }
 
 }

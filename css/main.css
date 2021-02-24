@@ -363,13 +363,14 @@ ul.dropdown-menu.show {
 .aboutMe img {
   width: 250px;
   border-radius: 5px;
+  mix-blend-mode: luminosity;
 }
 
 .skills {
   background: rgba(41, 41, 41, 0.164);
   border-radius: 30px;
   width: 80%;
-  max-width: 440px;
+  max-width: 400px;
   margin-top: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -393,12 +394,33 @@ ul.dropdown-menu.show {
           align-items: center;
 }
 
+.skills-content h2 {
+  font-size: 2.5em;
+  letter-spacing: .15em;
+  margin-top: 1em;
+}
+
 .skills-content ul {
   width: 80%;
   list-style: none;
 }
 
+.skills-content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills-content ul li p {
+  margin: 0;
+}
+
 .skills-content ul img {
+  margin-right: 2em;
   width: 40px;
   mix-blend-mode: lighten;
 }
@@ -406,5 +428,9 @@ ul.dropdown-menu.show {
 .skills-content p {
   width: 80%;
   font-size: .8em;
+}
+
+.skills-description {
+  margin-bottom: 2em;
 }
 /*# sourceMappingURL=main.css.map */
