@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan Burch Front-end Developer</title>
-    <link rel="stylesheet" href="css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" > 
     
 </head>
@@ -64,7 +64,6 @@
     <!-- /navbar -->
 
     <!-- Hero Section -->
-    
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-text">Building<br>Amazing<br>Experiences</h1>
@@ -77,9 +76,12 @@
             </div>
             <!-- /Hero buttons -->
         </div>
-    </section>
+    </section>    
+    <!-- /Hero Section -->
+
+
+    <!-- Hero SVG -->
     <div class="hero-svg">
-        <!-- Hero SVG -->
         <svg  width="729.055" height="418.9" viewBox="0 0 729.055 418.9">
             <g id="undraw_progressive_app_m9ms" transform="translate(0 0)">
                 <circle id="Ellipse_240" data-name="Ellipse 240" cx="37.915" cy="37.915" r="37.915" transform="translate(120.051 296.008)" fill="#f2f2f2"/>
@@ -125,9 +127,9 @@
                 <path id="Path_511" data-name="Path 511" d="M960.785,615.671a35.2,35.2,0,1,1,35.2-35.2A35.2,35.2,0,0,1,960.785,615.671Zm0-69.119A33.919,33.919,0,1,0,994.7,580.471a33.919,33.919,0,0,0-33.919-33.919Z" transform="translate(-352.688 -274.85)" fill="#3f3d56"/>
             </g>
         </svg>
-        <!-- /Hero SVG -->
     </div>
-    <!-- /Hero Section -->
+    <!-- /Hero SVG -->
+
 
     <!-- Featured Section -->
     <section class="feature">
@@ -153,29 +155,29 @@
                 </div>
 
             </div>
-            <div class="feature-preview">
-                <div id="featureCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
-                      </div>
+            <!-- carousel -->
+            <div id="featureCarousel" class="carousel slide carousel-dark feature-preview" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel"  data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel"  data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
+                    <div class="carousel-item">
+                    <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="images/social-app-dash-screenshot.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+            <!-- /carousel -->
         </div>
     </section>
     <!-- /Featured section -->
@@ -233,7 +235,6 @@
                     It uses chart.js to deliver reactive charts & graphs that respond to different time settings.
                 </p>     
             </div>
-            <hr class="style">
         </div>
         <!-- /project 0 -->
 
