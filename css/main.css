@@ -305,7 +305,7 @@ ul.dropdown-menu.show {
 
 .aboutMe-title {
   background: #2e2e2e;
-  background: linear-gradient(170deg, #2e2e2e 55%, #e8cbc0 55%);
+  background: linear-gradient(170deg, #2e2e2e 55%, #636FA4 55%);
   height: 400px;
   margin-top: -3em;
   margin-bottom: 0;
@@ -318,9 +318,9 @@ ul.dropdown-menu.show {
 
 .aboutMe-container {
   background: #E8CBC0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e8cbc0), to(#636fa4));
-  background: linear-gradient(180deg, #e8cbc0 0%, #636fa4 100%);
-  text-align: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e8cbc0), to(#636fa4));
+  background: linear-gradient(0deg, #e8cbc0 0%, #636fa4 100%);
+  padding-bottom: 3em;
 }
 
 .aboutMe-content {
@@ -354,7 +354,7 @@ ul.dropdown-menu.show {
           justify-content: space-between;
   width: 200px;
   list-style-type: none;
-  margin-top: 1em;
+  margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
@@ -363,5 +363,48 @@ ul.dropdown-menu.show {
 .aboutMe img {
   width: 250px;
   border-radius: 5px;
+}
+
+.skills {
+  background: rgba(41, 41, 41, 0.164);
+  border-radius: 30px;
+  width: 80%;
+  max-width: 440px;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills-content ul {
+  width: 80%;
+  list-style: none;
+}
+
+.skills-content ul img {
+  width: 40px;
+  mix-blend-mode: lighten;
+}
+
+.skills-content p {
+  width: 80%;
+  font-size: .8em;
 }
 /*# sourceMappingURL=main.css.map */
