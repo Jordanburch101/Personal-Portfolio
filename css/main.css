@@ -92,10 +92,41 @@ body {
 
 nav {
   display: none;
+  text-decoration: none;
+}
+
+nav a {
+  width: 100px;
+}
+
+nav a:link {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #fff;
+}
+
+nav a:hover {
+  color: #FFAF7B;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header-social {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
 }
 
 ul.dropdown-menu.show {
@@ -145,6 +176,15 @@ ul.dropdown-menu.show {
           justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    margin-left: -4em;
+  }
+  .hero h1 {
+    font-size: 3em;
+  }
+}
+
 .hero-contnet {
   z-index: 100;
 }
@@ -158,10 +198,21 @@ ul.dropdown-menu.show {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-svg svg {
-  width: 350px;
+  max-width: 350px;
+}
+
+@media (min-width: 768px) {
+  .hero-svg {
+    background: linear-gradient(160deg, #2e2e2e 50%, #e8cbc0 50%);
+  }
+  .hero-svg svg {
+    max-width: 500px;
+  }
 }
 
 .feature {
@@ -251,7 +302,7 @@ ul.dropdown-menu.show {
 
 .projects-intro {
   width: 80%;
-  padding-top: 3em;
+  padding-top: 4em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -281,7 +332,7 @@ ul.dropdown-menu.show {
 .projects-card {
   width: 90%;
   height: 550px;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;

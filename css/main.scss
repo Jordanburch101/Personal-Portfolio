@@ -1,3 +1,4 @@
+
 // ======================================
 //  Variables
 // ======================================
@@ -21,6 +22,28 @@ $font-primary: 'Poppins', sans-serif;
 $break-med: 768px;
 $break-lrg: 1024px;
 $break-sup: 1400px;
+
+
+// ======================================
+//  Mixins
+// ======================================
+
+// Media queries
+@mixin media($break) {            
+    @if $break == 'med' {
+      @media (min-width: $break-med) {
+        @content;             // Add 'else if' for more breakpoints
+      }          
+    } @else if $break == 'lrg' {
+      @media (min-width: $break-lrg) {
+        @content;             
+      }
+    } @else if $break == 'sup' {
+      @media (min-width: $break-sup) {
+        @content;             
+      }
+    }    
+  }
 // ======================================
 //  Base
 // ======================================
@@ -104,10 +127,33 @@ body {
 
 nav {
     display: none;
+    text-decoration: none;
+    a {
+        width: 100px;
+        &:link {
+            color: #fff;
+        }
+        &:visited {
+            color: #fff;
+        }
+        &:hover {
+            color: color(accent);
+        }
+    }
+    @include media(med) {
+        display: flex;
+        // justify-content: space-between;
+    }  
 }
 
 .header-social {
     display: none;
+}
+
+.dropdown {
+    @include media(med) {
+        display: none;
+    }
 }
 
 ul.dropdown-menu.show{
@@ -131,6 +177,7 @@ ul.dropdown-menu.show{
         font-weight: 400;
         letter-spacing: .25em;
         line-height: 1.8em;
+
     }
     &-tagline {
         font-size: .9em;
@@ -146,6 +193,13 @@ ul.dropdown-menu.show{
         display: flex;
         justify-content: space-between;
     }
+    @include media(med) {
+        margin-left: -4em;
+        h1 {
+            font-size: 3em;
+            
+        }
+    }
 }
 
 .hero-contnet {
@@ -158,9 +212,16 @@ ul.dropdown-menu.show{
     background: linear-gradient(150deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%); 
     display: flex;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
     svg {
-        width: 350px;
-        
+        max-width: 350px;
+    }
+    @include media(med) {
+        background: linear-gradient(160deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%);
+        svg {
+            max-width: 500px;
+        }
     }
 }
 
@@ -236,7 +297,7 @@ ul.dropdown-menu.show{
 
 .projects-intro {
     width: 80%;
-    padding-top: 3em;
+    padding-top: 4em;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -263,7 +324,7 @@ ul.dropdown-menu.show{
 .projects-card {
     width: 90%;
     height: 550px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
