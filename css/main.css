@@ -7,6 +7,7 @@
 body {
   height: 100vh;
   margin: 0;
+  background: #2E2E2E;
 }
 
 .button {
@@ -189,37 +190,35 @@ ul.dropdown-menu.show {
   z-index: 100;
 }
 
-.hero-svg {
-  background: #2e2e2e;
-  background: linear-gradient(150deg, #2e2e2e 50%, #e8cbc0 50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
+.hero-lower {
+  background: #E8CBC0;
+  -webkit-clip-path: polygon(100% 100%, 0 100%, 100% 0);
+          clip-path: polygon(100% 100%, 0 100%, 100% 0);
   overflow: hidden;
-}
-
-.hero-svg svg {
-  max-width: 350px;
+  height: 480px;
 }
 
 @media (min-width: 768px) {
-  .hero-svg {
-    background: linear-gradient(160deg, #2e2e2e 50%, #e8cbc0 50%);
-  }
-  .hero-svg svg {
+  .hero-lower svg {
     max-width: 500px;
   }
+}
+
+.hero-svg {
+  position: absolute;
+  top: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  max-width: 400px;
 }
 
 .feature {
   background: #E8CBC0;
   background: -webkit-gradient(linear, left top, left bottom, from(#e8cbc0), to(#636fa4));
   background: linear-gradient(180deg, #e8cbc0 0%, #636fa4 100%);
-  height: 900px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
@@ -232,16 +231,18 @@ ul.dropdown-menu.show {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-bottom: 8em;
+  padding-top: 5em;
 }
 
 .feature-content {
   width: 90%;
   max-width: 400px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-title {
-  margin-top: -3em;
   margin-bottom: 1.5em;
   font-size: 2.3em;
   font-weight: 400;
@@ -272,6 +273,29 @@ ul.dropdown-menu.show {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .feature-content {
+    max-width: 600px;
+  }
+  .feature-title {
+    font-size: 3em;
+  }
+  .feature-title2 {
+    font-size: 1.5em;
+  }
+  .feature-description {
+    font-size: 1em;
+  }
+  .feature-buttons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .feature-buttons a {
+    margin-right: 80px;
+  }
 }
 
 .feature-preview {

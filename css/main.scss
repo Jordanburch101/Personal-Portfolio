@@ -55,6 +55,7 @@ $break-sup: 1400px;
 body {
     height: 100vh;
     margin: 0;
+    background: color(bg);
 }
 
 .button {
@@ -207,23 +208,33 @@ ul.dropdown-menu.show{
 }
 
 
-.hero-svg {
-    background: rgb(46,46,46);
-    background: linear-gradient(150deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%); 
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.hero-lower {
+    background: color(secondary);
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    // background: rgb(46,46,46);
+    // background: linear-gradient(150deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%); 
+    // display: flex;
+    // justify-content: center;
+    
     overflow: hidden;
-    svg {
-        max-width: 350px;
-    }
+    height: 480px;
     @include media(med) {
-        background: linear-gradient(160deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%);
         svg {
             max-width: 500px;
         }
     }
 }
+.hero-svg {
+    position: absolute;
+    top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 400px;
+}
+
 
 
 // ======================================
@@ -233,20 +244,20 @@ ul.dropdown-menu.show{
 .feature {
     background: color(secondary);
     background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
-    height: 900px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     align-items: center;
     justify-content: space-evenly;
-    
+    padding-bottom: 8em;
+    padding-top: 5em;
     &-content {
         width: 90%;
         max-width: 400px;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     &-title {
-       margin-top: -3em;
         margin-bottom: 1.5em;
         font-size: 2.3em;
         font-weight: 400;
@@ -269,6 +280,26 @@ ul.dropdown-menu.show{
     &-buttons {
         display: flex;
         justify-content: space-between;
+    }
+    @include media(med) {
+        &-content {
+            max-width: 600px;
+        }
+        &-title {
+            font-size: 3em;
+        }
+        &-title2 {
+            font-size: 1.5em;
+        }
+        &-description {
+            font-size: 1em;
+        }
+        &-buttons {
+            justify-content: flex-start;
+            a {
+                margin-right: 80px;
+            }
+        }
     }
 
 }
