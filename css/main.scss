@@ -88,6 +88,9 @@ body {
         background: #fff;
         color: color(bg);
     }
+    @include media(lrg) {
+
+    }
 }
 
 
@@ -129,11 +132,12 @@ body {
             grid-template-rows: auto;
             margin-left: 0;
             margin-right: 0;
-            
+            a {
+                font-size: 1.2em;
+            }
 
         }
-    }
-    
+    }  
 }
 
 nav {
@@ -163,10 +167,12 @@ nav {
     }
     @include media(lrg) {
         justify-content: flex-start;
-        padding-left: 250px;
+        // padding
+        padding-left: 20%; 
         .navLogo {
             padding-right: 100px;
         }
+        
     }
 }
 
@@ -184,6 +190,7 @@ nav {
     }
     @include media(lrg) {
         display: flex;
+        padding-right: 2em;
     }
 }
 
@@ -216,6 +223,9 @@ ul.dropdown-menu.show{
         line-height: 1.8em;
 
     }
+    &-content {
+        width: 330px;
+    }
     &-tagline {
         font-size: .9em;
         letter-spacing: .1em;
@@ -232,6 +242,9 @@ ul.dropdown-menu.show{
     }
     @include media(med) {
         margin-left: -4em;
+        &-content {
+            width: 400px;
+        }
         h1 {
             font-size: 3em;
             
@@ -239,17 +252,35 @@ ul.dropdown-menu.show{
     }
     @include media(lrg) {
         height: 100vh;
+        // padding
+        padding-left: 25%;
+        justify-items: start;
         &-container {
             display: grid;
             grid-template-columns: 3fr 1fr;
             grid-template-rows: auto;
         }
+        h1 {
+            margin-top: 1.5em;
+            font-size: 4em;
+        }
+        &-content {
+
+        }
+
+        &-tagline {
+            font-size: 1.1em;
+        }
+        &-cta {
+            font-size: 1.1em;
+            margin-bottom: 2em;
+        }
+        &-buttons {
+           width: 350px;
+        }
     }
 }
 
-.hero-contnet {
-    z-index: 100;
-}
 
 
 .hero-lower {
@@ -279,6 +310,11 @@ ul.dropdown-menu.show{
         top: 550px;
         max-width: 500px;
     }
+    @include media(lrg) {
+        top: 300px;
+        left: 50%;
+        max-width: 35%;
+    }
 }
 
 
@@ -290,26 +326,28 @@ ul.dropdown-menu.show{
 .feature {
     background: color(secondary);
     background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-bottom: 8em;
-    padding-top: 5em;
-    &-content {
+    // display: grid;
+    // grid-template-columns: 100%;
+    // grid-template-rows: auto;
+    // align-items: center;
+    // justify-content: space-evenly;
+    padding-bottom: 100px;
+    // padding-top: 5em;
+    &-container {
         width: 90%;
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
     }
     &-title {
-        margin-bottom: 3em;
+        margin-top: 4em;
+        margin-bottom: 2em;
         font-size: 2.3em;
         font-weight: 400;
         letter-spacing: .18em;
         line-height: 2em;
         color: white;
+        text-align: center;
     }
     &-subtitle {
         color: color(primary);
@@ -329,7 +367,7 @@ ul.dropdown-menu.show{
         justify-content: space-between;
     }
     @include media(med) {
-        &-content {
+        &-container {
             max-width: 600px;
         }
         &-title {
@@ -345,8 +383,31 @@ ul.dropdown-menu.show{
             }
         }
     }
+    @include media(lrg) {
+        height: 90vh;
+        &-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            align-items: center;
+            max-width: 1200px;
+        }
+        &-title {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2em;
+            font-size: 3.5em;
+            letter-spacing: .30em; 
+            text-align: start;
+        }
+        &-description {
+            max-width: 500px;
+        }
+    }
 
 }
+.feature-preview {}
 
 .feature-preview {
     display: flex;
