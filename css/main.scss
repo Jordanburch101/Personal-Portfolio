@@ -55,7 +55,7 @@ $break-sup: 1400px;
 body {
     height: 100vh;
     margin: 0;
-    background: color(bg);
+    background: color(secondary);
 }
 
 .button {
@@ -174,7 +174,7 @@ ul.dropdown-menu.show{
     position: relative;
     h1 {
         margin-top: 1em;
-        font-size: 2.3em;
+        font-size: 2.1em;
         font-weight: 400;
         letter-spacing: .25em;
         line-height: 1.8em;
@@ -209,30 +209,32 @@ ul.dropdown-menu.show{
 
 
 .hero-lower {
-    background: color(secondary);
-    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    background: color(bg);
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
     // background: rgb(46,46,46);
     // background: linear-gradient(150deg, rgba(46,46,46,1) 50%, rgba(232,203,192,1) 50%); 
     // display: flex;
     // justify-content: center;
-    
-    overflow: hidden;
-    height: 480px;
+    padding-bottom: 3em;
+    height: 225px;
+    // border: none;
     @include media(med) {
-        svg {
-            max-width: 500px;
-        }
+        height: 440px;
     }
 }
 .hero-svg {
     position: absolute;
-    top: 500px;
+    top: 400px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     text-align: center;
-    max-width: 400px;
+    max-width: 300px;
+    @include media(med) {
+        top: 550px;
+        max-width: 500px;
+    }
 }
 
 
@@ -258,7 +260,7 @@ ul.dropdown-menu.show{
         margin-right: auto;
     }
     &-title {
-        margin-bottom: 1.5em;
+        margin-bottom: 3em;
         font-size: 2.3em;
         font-weight: 400;
         letter-spacing: .18em;
@@ -276,6 +278,7 @@ ul.dropdown-menu.show{
     }
     &-description {
         font-size: .8em;
+        line-height: 2em;
     }
     &-buttons {
         display: flex;
@@ -290,9 +293,6 @@ ul.dropdown-menu.show{
         }
         &-title2 {
             font-size: 1.5em;
-        }
-        &-description {
-            font-size: 1em;
         }
         &-buttons {
             justify-content: flex-start;
