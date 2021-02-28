@@ -95,8 +95,8 @@ body {
   .nav-container header {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 2fr 1fr;
-        grid-template-columns: 1fr 2fr 1fr;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     margin-left: 0;
@@ -108,15 +108,50 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: .9em;
 }
 
 nav .navLrg {
   display: none;
 }
 
+nav .navLrg a {
+  width: 100px;
+}
+
+nav .navLrg a:link {
+  color: #fff;
+}
+
+nav .navLrg a:visited {
+  color: #fff;
+}
+
+nav .navLrg a:hover {
+  color: #FFAF7B;
+}
+
 @media (min-width: 768px) {
   nav .navLrg {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 250px;
+  }
+  nav .navLogo {
+    padding-right: 100px;
   }
 }
 

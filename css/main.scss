@@ -125,7 +125,7 @@ body {
 
         @include media(lrg) {
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-columns: 3fr 1fr;
             grid-template-rows: auto;
             margin-left: 0;
             margin-right: 0;
@@ -138,41 +138,37 @@ body {
 
 nav {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: .9em;
     .navLrg {
         display: none;
+        a {
+            width: 100px;
+            &:link {
+                color: #fff;
+            }
+            &:visited {
+                color: #fff;
+            }
+            &:hover {
+                color: color(accent);
+            }
+        }
     }
     @include media(med) {
         .navLrg {
-            display: block;
+            display: flex;
+        }
+    }
+    @include media(lrg) {
+        justify-content: flex-start;
+        padding-left: 250px;
+        .navLogo {
+            padding-right: 100px;
         }
     }
 }
-
-// nav {
-//     display: none;
-//     text-decoration: none;
-//     font-size: .9em;
-//     margin-left: 10%;
-//     a {
-//         width: 100px;
-//         &:link {
-//             color: #fff;
-//         }
-//         &:visited {
-//             color: #fff;
-//         }
-//         &:hover {
-//             color: color(accent);
-//         }
-//     }
-//     @include media(med) {
-//         display: flex;
-    
-//     }  
-//     @include media(lrg) {
-        
-//     }
-// }
 
 .header-social {
     display: none;
@@ -191,12 +187,12 @@ nav {
     }
 }
 
+// Dropdown 
 .dropdown {
     @include media(med) {
         display: none;
     }
 }
-
 ul.dropdown-menu.show{
     background-color: color(bg);
 }
