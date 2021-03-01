@@ -605,26 +605,36 @@ ul.dropdown-menu.show {
 }
 
 .aboutMe {
+  background: #E8CBC0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e8cbc0), to(#636fa4));
+  background: linear-gradient(0deg, #e8cbc0 0%, #636fa4 100%);
+  margin-top: 300px;
   color: #fff;
+  position: relative;
 }
 
 .aboutMe-title {
   background: #2e2e2e;
-  background: linear-gradient(170deg, #2e2e2e 55%, #636FA4 55%);
-  height: 400px;
-  margin-top: -3em;
+  background: linear-gradient(175deg, #2e2e2e 55%, #636FA4 55%);
+  height: 300px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 0;
-  padding-top: 300px;
-  padding-bottom: 2em;
-  text-align: center;
   font-size: 3em;
   letter-spacing: .25em;
+  top: -300px;
+  width: 100%;
 }
 
 .aboutMe-container {
-  background: #E8CBC0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#e8cbc0), to(#636fa4));
-  background: linear-gradient(0deg, #e8cbc0 0%, #636fa4 100%);
   padding-bottom: 3em;
 }
 
@@ -650,6 +660,16 @@ ul.dropdown-menu.show {
   max-width: 400px;
 }
 
+.aboutMe-contact {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .aboutMe-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,6 +691,44 @@ ul.dropdown-menu.show {
   mix-blend-mode: luminosity;
 }
 
+@media (min-width: 1200px) {
+  .aboutMe-title {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 30%;
+    font-size: 3.5em;
+  }
+  .aboutMe-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 3fr;
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: "skills content";
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .aboutMe-content1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: photo;
+  }
+  .aboutMe-content2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  .aboutMe-content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: content;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "text photo";
+    max-width: 100%;
+  }
+}
+
 .skills {
   background: rgba(41, 41, 41, 0.164);
   border-radius: 30px;
@@ -681,6 +739,7 @@ ul.dropdown-menu.show {
   padding-bottom: 1em;
   margin-left: auto;
   margin-right: auto;
+  grid-area: skills;
 }
 
 .skills-content {

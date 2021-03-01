@@ -3,22 +3,27 @@
 // =====================================
 
 .aboutMe {
+    background: color(secondary);
+    background: linear-gradient(0deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+    margin-top: 300px;
     color: #fff;
+    position: relative;
     &-title {
         background: rgb(46,46,46);
-        background: linear-gradient(170deg, rgba(46,46,46,1) 55%, color(primary) 55%); 
-        height: 400px;
-        margin-top: -3em;
+        background: linear-gradient(175deg, rgba(46,46,46,1) 55%, color(primary) 55%); 
+        height: 300px;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
         margin-bottom: 0;
-        padding-top: 300px;
-        padding-bottom: 2em;
-        text-align: center;
         font-size: 3em;
         letter-spacing: .25em;
+        top: -300px;
+        width: 100%;
     }
     &-container {
-        background: color(secondary);
-        background: linear-gradient(0deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+
         padding-bottom: 3em;
     }
     &-content {
@@ -38,6 +43,11 @@
         font-size: .9em;
         max-width: 400px;
     }
+    &-contact {
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+    }
     &-links {
         display: flex;
         justify-content: space-between;
@@ -53,6 +63,33 @@
         border-radius: 5px;
         mix-blend-mode: luminosity;
     }
+    @include media(lrg) {
+        &-title {
+            justify-content: flex-end;
+            padding-right: 30%;
+            font-size: 3.5em;
+        }
+        &-container {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-areas: "skills content";
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        &-content1 {
+            grid-area: photo;
+        }
+        &-content2 {
+            grid-area: text;
+        }
+
+        &-content {
+            grid-area: content;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "text photo";
+            max-width: 100%;
+        }
+    }
 }
 
 .skills {
@@ -65,6 +102,7 @@
     padding-bottom: 1em;
     margin-left: auto;
     margin-right: auto;
+    grid-area: skills;
     &-content { 
         display: flex;
         flex-direction: column;
