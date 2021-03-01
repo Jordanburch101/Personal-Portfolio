@@ -1,0 +1,90 @@
+// ======================================
+//  Projects Section
+// =====================================
+.projects {
+    background: color(bg);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2em;
+}
+
+.projects-intro {
+    width: 80%;
+    padding-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    &-title {
+        font-size: 2em;
+        font-weight: 400;
+        letter-spacing: .35em;
+        &-start {
+            color: color(accent);
+        }
+        
+        &-end {
+            color: color(accent);
+        }
+    }
+    p {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        font-size: .7em;
+    }
+}
+
+.projects-card {
+    width: 90%;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    .carousel-inner {
+        border-radius: 2px;
+    }
+    @include media(med) {
+        max-width: 500px;
+    }
+}
+
+.project {
+    &-content {
+        color: #fff;
+        font-size: .8em;
+    }
+    &-buttons {
+        display: flex; 
+        width: 100%;
+        justify-content: space-between;
+        font-size: 1.2em;
+    }
+    &-subtitle {
+        display: flex;
+        color: color(accent);
+        font-weight: bold;
+        letter-spacing: .35em;
+        margin-top: 2em;
+        margin-bottom: .5em;
+    }
+    &-title {
+        font-size: 2em;
+        font-weight: 400;
+        letter-spacing: .15em;
+    }
+    &-description {
+        line-height: 2.2em;
+    }
+    @include media(med) {
+        &-buttons {
+            justify-content: flex-start;
+            a {
+                margin-right: 80px;
+            }
+        }
+    }
+}

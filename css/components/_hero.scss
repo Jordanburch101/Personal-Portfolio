@@ -1,0 +1,112 @@
+// ======================================
+//  Hero Section
+// ======================================
+.hero {
+    background: color(bg);
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;  
+    position: relative;
+    h1 {
+        margin-top: 1em;
+        font-size: 2.1em;
+        font-weight: 400;
+        letter-spacing: .25em;
+        line-height: 1.8em;
+
+    }
+    &-content {
+        width: 330px;
+    }
+    &-tagline {
+        font-size: .9em;
+        letter-spacing: .1em;
+        span {
+            color: color(accent);
+        }
+    }
+    &-cta {
+        margin-top: 2.5em;
+    }
+    &-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include media(med) {
+        margin-left: -4em;
+        &-content {
+            width: 400px;
+        }
+        h1 {
+            font-size: 3em;
+            
+        }
+    }
+    @include media(lrg) {
+        height: 100vh;
+        // padding
+        padding-left: 25%;
+        justify-items: start;
+        &-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto;
+        }
+        h1 {
+            margin-top: 1.5em;
+            font-size: 4em;
+        }
+        &-content {
+
+        }
+
+        &-tagline {
+            font-size: 1.1em;
+        }
+        &-cta {
+            font-size: 1.1em;
+            margin-bottom: 2em;
+        }
+        &-buttons {
+           width: 350px;
+        }
+    }
+}
+
+
+
+.hero-lower {
+    background: color(bg);
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    padding-bottom: 3em;
+    height: 225px;
+    width: 100%;
+    @include media(med) {
+        height: 440px;
+    }
+    @include media(lrg) {
+        background-color: color(secondary);
+        clip-path: none
+    }
+}
+.hero-svg {
+    position: absolute;
+    top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 300px;
+    @include media(med) {
+        top: 550px;
+        max-width: 500px;
+    }
+    @include media(lrg) {
+        top: 300px;
+        left: 50%;
+        max-width: 35%;
+    }
+}

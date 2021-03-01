@@ -1,0 +1,48 @@
+// ======================================
+//  Base
+// ======================================
+* {
+    font-family: $font-primary;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: color(secondary);
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    &-primary {
+        background-color: color(primary);
+        color: #fff;
+    }
+}
+
+.butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    &-primary {
+        background: color(primary);
+    }
+    &-secondary {
+        background: #fff;
+        color: color(bg);
+    }
+    @include media(lrg) {
+
+    }
+}

@@ -1,0 +1,109 @@
+// ======================================
+//  Nav Section
+// ======================================
+
+.nav-container {
+    background-color: color(bg-dark);
+    header {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 2em;
+        margin-right: 2em;
+        a {
+            text-decoration: none;
+            font-size: 1.2em;
+            .navName {
+                &-first {
+                    color: color(secondary);
+                }
+                &-start {
+                    color: color(accent);
+                }
+                &-last {
+                    color: color(primary);
+                }
+                &-end {
+                    color: color(accent);
+                }
+            }
+        }
+
+        @include media(lrg) {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto;
+            margin-left: 0;
+            margin-right: 0;
+            a {
+                font-size: 1.2em;
+            }
+
+        }
+    }  
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: .9em;
+    .navLrg {
+        display: none;
+        a {
+            width: 100px;
+            &:link {
+                color: #fff;
+            }
+            &:visited {
+                color: #fff;
+            }
+            &:hover {
+                color: color(accent);
+            }
+        }
+    }
+    @include media(med) {
+        .navLrg {
+            display: flex;
+        }
+    }
+    @include media(lrg) {
+        justify-content: flex-start;
+        // padding
+        padding-left: 20%; 
+        .navLogo {
+            padding-right: 100px;
+        }
+        
+    }
+}
+
+.header-social {
+    display: none;
+    margin: 0;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: color(secondary);
+    list-style-type: none;
+    a {
+        margin: 1em;
+    }
+    @include media(lrg) {
+        display: flex;
+        padding-right: 2em;
+    }
+}
+
+// Dropdown 
+.dropdown {
+    @include media(med) {
+        display: none;
+    }
+}
+ul.dropdown-menu.show{
+    background-color: color(bg);
+}

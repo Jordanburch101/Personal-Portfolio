@@ -1,0 +1,23 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors
+$colors: (
+    primary: #636FA4,
+    secondary: #E8CBC0,
+    accent: #FFAF7B,
+    bg: #2E2E2E,
+    bg-dark: #2D2C2C,
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+$font-primary: 'Poppins', sans-serif;
+
+// breakpoints
+$break-med: 768px;
+$break-lrg: 1200px;
+$break-sup: 1400px;
