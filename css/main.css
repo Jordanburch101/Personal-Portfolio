@@ -460,16 +460,32 @@ ul.dropdown-menu.show {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-gap: 2em;
+  grid-gap: 150px;
+}
+
+@media (min-width: 1200px) {
+  .projects {
+    grid-gap: 250px;
+  }
 }
 
 .projects-intro {
-  width: 80%;
-  padding-top: 6em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
+  margin-bottom: -200px;
 }
 
 .projects-intro-title {
@@ -492,19 +508,22 @@ ul.dropdown-menu.show {
   font-size: .7em;
 }
 
+@media (min-width: 1200px) {
+  .projects-intro {
+    font-size: 1.5em;
+  }
+}
+
 .projects-card {
   width: 90%;
-  height: 550px;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   max-width: 350px;
 }
 
@@ -515,6 +534,16 @@ ul.dropdown-menu.show {
 @media (min-width: 768px) {
   .projects-card {
     max-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-card {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+        grid-template-areas: "content carousel";
+    max-width: 1400px;
   }
 }
 
@@ -563,6 +592,15 @@ ul.dropdown-menu.show {
   }
   .project-buttons a {
     margin-right: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-content {
+    grid-area: content;
+  }
+  .project .carousel {
+    grid-area: carousel;
   }
 }
 

@@ -6,16 +6,20 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: 2em;
+    grid-gap: 150px;
+    @include media(lrg) {
+        grid-gap: 250px
+    }
 }
 
 .projects-intro {
-    width: 80%;
-    padding-top: 6em;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
+    margin-bottom: -200px;
     &-title {
         font-size: 2em;
         font-weight: 400;
@@ -33,22 +37,35 @@
         margin-bottom: 1.5em;
         font-size: .7em;
     }
+    @include media(lrg) {
+        font-size: 1.5em;
+    }
 }
 
 .projects-card {
     width: 90%;
-    height: 550px;
-    margin-top: 50px;
+    // margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    flex-direction: column;
+    // margin-bottom: 100px;
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     max-width: 350px;
     .carousel-inner {
         border-radius: 2px;
     }
     @include media(med) {
         max-width: 500px;
+    }
+    @include media(lrg) {
+        // margin-bottom: 200px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3em;
+        grid-template-areas: "content carousel";
+        max-width: 1400px;
     }
 }
 
@@ -85,6 +102,14 @@
             a {
                 margin-right: 80px;
             }
+        }
+    }
+    @include media(lrg) {
+        &-content {
+            grid-area: content;
+        }
+        .carousel {
+            grid-area: carousel;
         }
     }
 }
