@@ -5,15 +5,18 @@
 .feature {
     background: color(secondary);
     background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
-    padding-bottom: 100px;
+    padding: 150px 0;
     &-container {
         width: 90%;
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
     }
+    &-content {
+        max-width: 600px;
+        grid-area: content;
+    }
     &-title {
-        margin-top: 4em;
         margin-bottom: 2em;
         font-size: 2.3em;
         font-weight: 400;
@@ -21,6 +24,13 @@
         line-height: 2em;
         color: white;
         text-align: center;
+        grid-area: title;
+        hr {
+            height: 5px;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+        }
     }
     &-subtitle {
         color: color(primary);
@@ -39,15 +49,18 @@
         display: flex;
         justify-content: space-between;
     }
+    &-preview {
+        grid-area: carousel;
+        margin-top: 2em;
+        img {
+            border-radius: 5px;
+        }
+    
+    }
     @include media(med) {
+        font-size: 1.2em;
         &-container {
             max-width: 600px;
-        }
-        &-title {
-            font-size: 3em;
-        }
-        &-title2 {
-            font-size: 1.5em;
         }
         &-buttons {
             justify-content: flex-start;
@@ -57,38 +70,30 @@
         }
     }
     @include media(lrg) {
-        height: 90vh;
+        // height: 90vh;
+        // padding: 200px 0;
         &-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
+            grid-template-areas: 
+            "title title"
+            "content carousel";
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
         }
         &-title {
-            max-width: 1200px;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 2em;
+            margin-top: 0;
             font-size: 3.5em;
             letter-spacing: .30em; 
             text-align: start;
+            hr {
+                width: 100%;
+            }
         }
-        &-description {
-            max-width: 500px;
-        }
-    }
-
-}
-.feature-preview {}
-
-.feature-preview {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2em;
-    width: auto;
-    img {
-        border-radius: 2px;
     }
 
 }

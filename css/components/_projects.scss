@@ -8,6 +8,7 @@
     grid-template-rows: auto;
     grid-gap: 150px;
     @include media(lrg) {
+        // font-size: 1.1em;
         grid-gap: 250px
     }
 }
@@ -38,7 +39,7 @@
         font-size: .7em;
     }
     @include media(lrg) {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 }
 

@@ -80,7 +80,6 @@
 .hero-lower {
     background: color(bg);
     clip-path: polygon(100% 0, 0% 100%, 0 0);
-    padding-bottom: 3em;
     height: 225px;
     width: 100%;
     @include media(med) {

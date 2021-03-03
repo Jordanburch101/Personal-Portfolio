@@ -8,28 +8,25 @@
     margin-top: 300px;
     color: #fff;
     position: relative;
-    &-title {
+    &-upper {
         background: rgb(46,46,46);
         background: linear-gradient(175deg, rgba(46,46,46,1) 55%, color(primary) 55%); 
         height: 300px;
         position: absolute;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        margin-bottom: 0;
-        font-size: 3em;
-        letter-spacing: .25em;
         top: -300px;
         width: 100%;
     }
     &-container {
-
         padding-bottom: 3em;
     }
     &-content {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        grid-template-areas: 
+        "title"
+        "photo"
+        "info";
         grid-gap: 1em;
         justify-items: center;
         width: 95%;
@@ -38,10 +35,21 @@
         margin-left: auto;
         margin-right: auto;
     }
+    &-title {
+        font-size: 3em;
+        margin-top: -1em;
+        letter-spacing: .25em;
+        grid-area: title;
+    }
     &-description {
-        margin-bottom: 0;
         font-size: .9em;
         max-width: 400px;
+    }
+    &-email {
+        color: color(email);
+    }
+    &-phone {
+        color: color(phone);
     }
     &-contact {
         margin-top: 1em;
@@ -59,14 +67,22 @@
         padding-left: 0;
     }
     img {
-        width:250px;
+        width: 250px;
         border-radius: 5px;
         mix-blend-mode: luminosity;
     }
+    &-content1 {
+        grid-area: photo;
+        align-self: start;
+    }
+    &-content2 {
+        grid-area: info;
+        align-self: start;
+    }
     @include media(lrg) {
         &-title {
-            justify-content: flex-end;
-            padding-right: 30%;
+            text-align: right;
+            width: 70%;
             font-size: 3.5em;
         }
         &-container {
@@ -76,17 +92,14 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-        &-content1 {
-            grid-area: photo;
-        }
-        &-content2 {
-            grid-area: text;
-        }
 
         &-content {
             grid-area: content;
             grid-template-columns: 1fr 1fr;
-            grid-template-areas: "text photo";
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "title title"
+            "info photo";
             max-width: 100%;
         }
     }
