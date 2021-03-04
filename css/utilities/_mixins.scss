@@ -16,5 +16,9 @@
       @media (min-width: $break-sup) {
         @content;             
       }
-    }    
+    } @else if $break == 'xl' {
+      @media (min-width: $break-xl) {
+        @content;             
+      }
+    } 
   }

@@ -55,6 +55,14 @@ a {
   color: #2E2E2E;
 }
 
+@media (min-width: 2000px) {
+  .butt {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+  }
+}
+
 .nav-container {
   background-color: #2D2C2C;
 }
@@ -213,7 +221,10 @@ ul.dropdown-menu.show {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   justify-items: center;
-  position: relative;
+}
+
+.hero-content {
+  width: 330px;
 }
 
 .hero h1 {
@@ -222,10 +233,6 @@ ul.dropdown-menu.show {
   font-weight: 400;
   letter-spacing: .25em;
   line-height: 1.8em;
-}
-
-.hero-content {
-  width: 330px;
 }
 
 .hero-tagline {
@@ -292,6 +299,26 @@ ul.dropdown-menu.show {
   }
 }
 
+@media (min-width: 2000px) {
+  .hero-content {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 6em;
+  }
+  .hero-tagline {
+    font-size: 1.5em;
+  }
+  .hero-cta {
+    font-size: 1.5em;
+    margin: 2em 0;
+  }
+  .hero-buttons {
+    font-size: 1.2em;
+    width: 450px;
+  }
+}
+
 .hero-lower {
   background: #2E2E2E;
   -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
@@ -316,7 +343,8 @@ ul.dropdown-menu.show {
 
 .hero-svg {
   position: absolute;
-  top: 400px;
+  display: block;
+  top: 55%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -327,16 +355,31 @@ ul.dropdown-menu.show {
 
 @media (min-width: 768px) {
   .hero-svg {
-    top: 550px;
+    top: 70%;
     max-width: 500px;
   }
 }
 
 @media (min-width: 1200px) {
   .hero-svg {
-    top: 300px;
-    left: 50%;
+    top: 30%;
+    left: 55%;
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .hero-svg {
+    left: 60%;
     max-width: 35%;
+  }
+}
+
+@media (min-width: 2200px) {
+  .hero-svg {
+    max-width: 50%;
+    top: 30%;
+    left: 50%;
   }
 }
 
@@ -664,11 +707,11 @@ ul.dropdown-menu.show {
 }
 
 .aboutMe-email {
-  color: #7bff76;
+  color: #FFCB9E;
 }
 
 .aboutMe-phone {
-  color: #7bff76;
+  color: #FFCB9E;
 }
 
 .aboutMe-contact {
