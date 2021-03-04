@@ -69,7 +69,7 @@
     img {
         width: 250px;
         border-radius: 5px;
-        mix-blend-mode: luminosity;
+        mix-blend-mode: overlay;
     }
     &-content1 {
         grid-area: photo;
@@ -106,8 +106,8 @@
 }
 
 .skills {
-    background: rgba(41, 41, 41, 0.164) ;
-    border-radius: 30px;
+    background: rgba(54, 54, 54, 0.199);
+    border-radius: 20px;
     width: 80%;
     max-width: 400px;
     margin-top: 2em;
@@ -140,7 +140,7 @@
             img {
                 margin-right: 2em;
                 width: 40px;
-                mix-blend-mode: lighten;
+                mix-blend-mode: screen;
             }
         }
         p {
