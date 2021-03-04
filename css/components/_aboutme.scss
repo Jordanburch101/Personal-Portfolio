@@ -82,7 +82,8 @@
     @include media(lrg) {
         &-title {
             text-align: right;
-            width: 70%;
+            justify-self: end;
+            margin-right: 1em;
             font-size: 3.5em;
         }
         &-container {

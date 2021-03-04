@@ -779,7 +779,9 @@ ul.dropdown-menu.show {
 @media (min-width: 1200px) {
   .aboutMe-title {
     text-align: right;
-    width: 70%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    margin-right: 1em;
     font-size: 3.5em;
   }
   .aboutMe-container {

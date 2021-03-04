@@ -39,7 +39,6 @@
             a {
                 font-size: 1.2em;
             }
-
         }
     }  
 }
@@ -71,7 +70,6 @@ nav {
     }
     @include media(lrg) {
         justify-content: flex-start;
-        // padding
         padding-left: 20%; 
         .navLogo {
             padding-right: 100px;
