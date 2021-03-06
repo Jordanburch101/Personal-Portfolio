@@ -4,7 +4,7 @@
 
 .feature {
     background: color(secondary);
-    background: linear-gradient(180deg, rgba(232,203,192,1) 0%, rgba(99,111,164,1) 100%);
+    background: linear-gradient(180deg, color(secondary) 0%, color(primary) 100%);
     padding: 150px 0;
     &-container {
         width: 90%;
@@ -73,14 +73,14 @@
         // height: 90vh;
         // padding: 200px 0;
         &-container {
+            max-width: 1400px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto;
             grid-template-areas: 
             "title title"
             "content carousel";
-            align-items: center;
-            max-width: 1400px;
+            grid-gap: 1em;
         }
         &-title {
             width: 100%;
