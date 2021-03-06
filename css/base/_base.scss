@@ -11,21 +11,11 @@ body {
     margin: 0;
     background: color(secondary);
 }
-a {
+a, {
     text-decoration: none;
 }
-.button {
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    font-size: 1em;
-    &-primary {
-        background-color: color(primary);
-        color: #fff;
-    }
-}
 
+// Button styles
 .butt {
     display: flex;
     justify-content: center;
@@ -34,15 +24,43 @@ a {
     height: 40px;
     border-radius: 20px;
     border: none;
+    outline: none;
     font-size: 1em;
-    text-decoration: none;
-    color: #fff;
+    position: relative;
+
+    z-index: 1;
+    transition: color 300ms ease-in-out;
+    --border-size: 2px;
     &-primary {
+        color: #fff;
         background: color(primary);
     }
     &-secondary {
         background: #fff;
         color: color(bg);
+    }
+// Animations
+    &:before {
+        content: '';
+        position: absolute;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: color(accent);
+        transition: transform 300ms ease-in-out;
+        transform: scaleX(0);
+        // transform-origin: top;
+    }
+    &:focus,
+    &:hover {
+        color: color(bg);
+    }
+    &:hover:before,
+    &:focus:before {
+        transform: scaleX(1);
     }
     @include media(sup) {
         width: 200px;
@@ -50,3 +68,5 @@ a {
         border-radius: 30px;
     }
 }
+
+

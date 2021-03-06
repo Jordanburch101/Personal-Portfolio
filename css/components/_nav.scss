@@ -50,16 +50,25 @@ nav {
     .navLrg {
         display: none;
         a {
+            transition: color 200ms ease-in-out;
             width: 100px;
-            &:link {
-                color: #fff;
-            }
+            &:link, 
             &:visited {
                 color: #fff;
             }
-            &:hover {
+            &:hover, 
+            &:focus {
                 color: color(accent);
             }
+        }
+    }
+    // Logo Transition
+    span {
+        transition: color 200ms ease-in-out;
+    }
+    .navLogo:hover {
+        span {
+            color: color(accent);
         }
     }
     @include media(med) {
@@ -71,7 +80,7 @@ nav {
         justify-content: flex-start;
         padding-left: 20%; 
         .navLogo {
-            padding-right: 100px;
+            margin-right: 100px;
         }
         
     }
@@ -87,6 +96,13 @@ nav {
     align-items: center;
     background-color: color(secondary);
     list-style-type: none;
+    svg {
+        transition: fill 300ms ease-in-out;
+    }
+    svg:hover,
+    svg:focus {
+        fill: #fff;
+    }
     a {
         margin: 1em;
     }

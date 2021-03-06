@@ -105,6 +105,7 @@
     }
     @include media(lrg) {
         background-color: color(secondary);
+        height: 100vh;
         position: relative;
         clip-path: none
     }
@@ -123,13 +124,12 @@
         max-width: 500px;
     }
     @include media(lrg) {
-        top: 50%;
+        top: 25%;
         left: -50%;
         max-width: 650px;
         margin: 0;
     }
     @include media(sup) {
-        top: 70%;
         max-width: 1050px;
     }
 }
