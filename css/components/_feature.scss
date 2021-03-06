@@ -28,13 +28,14 @@
         hr {
             height: 5px;
             border-radius: 10px;
-            width: 80%;
+            // width: 80%;
             margin: auto;
         }
     }
     &-subtitle {
         color: color(primary);
         margin-bottom: 0;
+        letter-spacing: .35em;
     }
     &-title2 {
         font-size: 1.3em;
@@ -44,6 +45,28 @@
     &-description {
         font-size: .8em;
         line-height: 2em;
+    }
+    &-techStack {
+        margin: 1em 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        width: 150px;
+        justify-content: space-between;
+        li {   
+            display: flex;
+            align-items: center;
+            color: #fff;
+            p {
+                margin: 0 1em;
+            }
+
+
+        }
+        svg {
+            border-radius: 10px;
+            width: 40px;
+        }
     }
     &-buttons {
         display: flex;
@@ -70,8 +93,6 @@
         }
     }
     @include media(lrg) {
-        // height: 90vh;
-        // padding: 200px 0;
         &-container {
             max-width: 1400px;
             display: grid;
@@ -90,9 +111,6 @@
             font-size: 3.5em;
             letter-spacing: .30em; 
             text-align: start;
-            hr {
-                width: 100%;
-            }
         }
     }
 

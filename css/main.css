@@ -468,13 +468,13 @@ ul.dropdown-menu.show {
 .feature-title hr {
   height: 5px;
   border-radius: 10px;
-  width: 80%;
   margin: auto;
 }
 
 .feature-subtitle {
   color: #636FA4;
   margin-bottom: 0;
+  letter-spacing: .35em;
 }
 
 .feature-title2 {
@@ -486,6 +486,38 @@ ul.dropdown-menu.show {
 .feature-description {
   font-size: .8em;
   line-height: 2em;
+}
+
+.feature-techStack {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feature-techStack li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.feature-techStack li p {
+  margin: 0 1em;
+}
+
+.feature-techStack svg {
+  border-radius: 10px;
+  width: 40px;
 }
 
 .feature-buttons {
@@ -543,9 +575,6 @@ ul.dropdown-menu.show {
     font-size: 3.5em;
     letter-spacing: .30em;
     text-align: start;
-  }
-  .feature-title hr {
-    width: 100%;
   }
 }
 
@@ -665,7 +694,6 @@ ul.dropdown-menu.show {
   display: -ms-flexbox;
   display: flex;
   color: #FFAF7B;
-  font-weight: bold;
   letter-spacing: .35em;
   margin-top: 2em;
   margin-bottom: .5em;
