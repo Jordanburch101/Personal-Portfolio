@@ -3,23 +3,56 @@
 // =====================================
 
 .cta {
-    background: color(secondary);
-    background: linear-gradient(0deg, color(secondary) 0%, color(primary) 100%);
-    margin-top: 300px;
+    background: color(primary);
     color: #fff;
-    position: relative;
-    // Top diag slice
     &-upper {
-        background: rgb(46,46,46);
-        background: linear-gradient(-175deg, color(bg) 55%, color(primary) 55%); 
-        height: 300px;
-        position: absolute;
-        top: -300px;
-        width: 100%;
+        background: color(bg);
+        height: 100px;
+
+    }
+}
+
+.cta {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    h1 {
+        letter-spacing: .20em;
+    }
+    ul {
+
+    }
+    p {
+        color: color(accent);
     }
 }
 
 footer {
-    height: 100px;
     background-color: color(bg-dark);
+    .footer-content {
+        height: 100px;
+        margin: 0 2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            font-size: 1em;
+        }
+        p {
+            color: rgb(59, 59, 59);
+            margin: 0;
+            display: none;
+        }
+        @include media(med) {
+            p {
+                display: block;
+            }
+        }
+        @include media(lrg) {
+            padding: 0 10%;
+        }
+    }
 }

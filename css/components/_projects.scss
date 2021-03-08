@@ -14,21 +14,18 @@
 }
 
 .projects-intro {
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    margin-bottom: -200px;
+    padding-top: 100px;
+    margin-bottom: -100px;
     &-title {
-        font-size: 2em;
-        font-weight: 400;
-        letter-spacing: .35em;
+        margin: 0;
         &-start {
             color: color(accent);
         }
-        
         &-end {
             color: color(accent);
         }

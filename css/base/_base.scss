@@ -9,12 +9,47 @@
 body {
     height: 100vh;
     margin: 0;
-    background: color(secondary);
-}
-a, {
-    text-decoration: none;
+    background-color: color(secondary);
 }
 
+a { 
+    text-decoration: none;
+    // font-size: 1.2em;
+    color: #fff;
+    transition: color 200ms ease-in-out;
+    &:hover, 
+    &:focus {
+        color: color(accent);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: .25em;
+    line-height: 1.8em;
+    margin-top: 1em;
+    color: #fff;
+}
+
+h2 {
+    font-size: 2.3em;
+    font-weight: 400;
+    letter-spacing: .18em;
+    line-height: 2em;
+    margin-bottom: 2em;
+    color: white;
+}
+h3 {
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: .15em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
 // Button styles
 .butt {
     display: flex;
@@ -38,7 +73,7 @@ a, {
         background: #fff;
         color: color(bg);
     }
-// Animations
+    // Animations
     &:before {
         content: '';
         position: absolute;
@@ -70,7 +105,6 @@ a, {
 }
 
 // Logo
-
 .logo {
     &-first {
         color: color(secondary);
@@ -84,4 +118,13 @@ a, {
     &-end {
         color: color(accent);
     }
+    &:hover,
+    &:focus {
+        span {
+            transition: color 200ms ease-in-out;
+            color: color(accent);
+        }
+    }
+
 }
+
