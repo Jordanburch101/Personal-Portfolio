@@ -1,0 +1,25 @@
+// ======================================
+//  CTA Section
+// =====================================
+
+.cta {
+    background: color(secondary);
+    background: linear-gradient(0deg, color(secondary) 0%, color(primary) 100%);
+    margin-top: 300px;
+    color: #fff;
+    position: relative;
+    // Top diag slice
+    &-upper {
+        background: rgb(46,46,46);
+        background: linear-gradient(-175deg, color(bg) 55%, color(primary) 55%); 
+        height: 300px;
+        position: absolute;
+        top: -300px;
+        width: 100%;
+    }
+}
+
+footer {
+    height: 100px;
+    background-color: color(bg-dark);
+}

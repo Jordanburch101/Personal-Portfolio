@@ -8,6 +8,7 @@
     margin-top: 300px;
     color: #fff;
     position: relative;
+    // Top diag slice
     &-upper {
         background: rgb(46,46,46);
         background: linear-gradient(175deg, color(bg) 55%, color(primary) 55%); 
@@ -45,18 +46,22 @@
         font-size: .9em;
         max-width: 400px;
     }
-    &-email {
-        color: color(accent2);
-    }
-    &-phone {
-        color: color(accent2);
+    // Contact links
+    &-links {
+        color: color(accent);
+        transition: color 200ms ease-in-out;
+        &:focus,
+        &:hover {
+            color: color(bg);
+        }
     }
     &-contact {
         margin-top: 1em;
         display: flex;
         justify-content: center;
     }
-    &-links {
+    // Social icons
+    &-socialIcons {
         display: flex;
         justify-content: space-between;
         width: 200px;
@@ -65,6 +70,14 @@
         margin-left: auto;
         margin-right: auto;
         padding-left: 0;
+        fill: #fff;
+        svg {
+            transition: fill 200ms ease-in-out;
+            &:hover,
+            &:focus {
+                fill: color(bg);
+            }
+        }
     }
     img {
         width: 250px;

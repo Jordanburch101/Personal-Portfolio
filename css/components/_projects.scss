@@ -38,6 +38,14 @@
         margin-bottom: 1.5em;
         font-size: .7em;
     }
+    &-git {
+        fill: #fff;
+        transition: fill 200ms ease-in-out;
+        &:hover,
+        &:focus {
+            fill: color(accent);
+        }
+    }
     @include media(lrg) {
         font-size: 1.6em;
     }
@@ -45,12 +53,8 @@
 
 .projects-card {
     width: 90%;
-    // margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    // margin-bottom: 100px;
-    // display: flex;
-    // flex-direction: column;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -62,7 +66,6 @@
         max-width: 500px;
     }
     @include media(lrg) {
-        // margin-bottom: 200px;
         grid-template-columns: 1fr 1fr;
         grid-gap: 3em;
         grid-template-areas: "content carousel";

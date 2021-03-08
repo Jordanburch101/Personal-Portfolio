@@ -66,7 +66,8 @@ nav {
     span {
         transition: color 200ms ease-in-out;
     }
-    .navLogo:hover {
+    .navLogo:hover,
+    .navLogo:focus {
         span {
             color: color(accent);
         }
@@ -97,14 +98,12 @@ nav {
     background-color: color(secondary);
     list-style-type: none;
     svg {
-        transition: fill 300ms ease-in-out;
-    }
-    svg:hover,
-    svg:focus {
-        fill: #fff;
-    }
-    a {
         margin: 1em;
+        transition: fill 200ms ease-in-out;
+        &:hover,
+        &:focus {
+            fill: #fff;
+        }
     }
     @include media(lrg) {
         display: flex;
