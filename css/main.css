@@ -124,12 +124,12 @@ ul {
   color: #E8CBC0;
 }
 
-.logo-start {
-  color: #FFAF7B;
-}
-
 .logo-last {
   color: #636FA4;
+}
+
+.logo-start {
+  color: #FFAF7B;
 }
 
 .logo-end {
@@ -303,9 +303,6 @@ ul.dropdown-menu.show {
 }
 
 @media (min-width: 768px) {
-  .hero {
-    margin-left: -4em;
-  }
   .hero-content {
     width: 400px;
   }
@@ -317,7 +314,7 @@ ul.dropdown-menu.show {
 @media (min-width: 1400px) {
   .hero {
     height: 100vh;
-    padding-left: 25%;
+    padding-left: 20%;
     justify-items: start;
   }
   .hero-container {
@@ -945,16 +942,85 @@ ul.dropdown-menu.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 400px;
+  max-width: 350px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 0 auto;
 }
 
 .cta h1 {
   letter-spacing: .20em;
+  font-weight: 500;
+  margin: 0;
 }
 
 .cta p {
   color: #FFAF7B;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+
+.cta .butt {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.cta ul {
+  margin-top: 2em;
+}
+
+.cta ul li {
+  margin: 1em 0;
+}
+
+.cta ul li a {
+  -webkit-transition: fill 400ms ease-in-out;
+  transition: fill 400ms ease-in-out;
+  fill: #fff;
+}
+
+.cta ul li a:hover, .cta ul li a:focus {
+  fill: #FFAF7B;
+  color: #FFAF7B;
+}
+
+.cta ul li svg {
+  width: 40px;
+  margin-right: 1em;
+}
+
+.cta ul li span {
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-size: .9em;
+}
+
+@media (min-width: 768px) {
+  .cta-content {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cta-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 1400px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cta h1 {
+    font-size: 3.5em;
+  }
 }
 
 footer {

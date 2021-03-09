@@ -1,6 +1,7 @@
 // ======================================
 //  Base
 // ======================================
+
 * {
     font-family: $font-primary;
     box-sizing: border-box;
@@ -109,11 +110,11 @@ ul {
     &-first {
         color: color(secondary);
     }
-    &-start {
-        color: color(accent);
-    }
     &-last {
         color: color(primary);
+    }
+    &-start {
+        color: color(accent);
     }
     &-end {
         color: color(accent);
