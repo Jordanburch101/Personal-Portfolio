@@ -2,30 +2,138 @@
 //  Contact Section
 // =====================================
 .contact-container {
-    height: 84vh;
+    // height: 100vh;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
+    @include media(med) {
+    }
     @include media(lrg) {
         grid-template-columns: 70% 30%;
+        height: 84vh;
     }
 }
 
 .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: color(bg);
-    // height: 100vh;
+    // Content
+    &-content {
+        margin: 0 1em;
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            color: color(accent);
+        }
+    }
+    @include media(med) {
+        h1 {
+            font-size: 3.5em;
+        }
+    }
     @include media(lrg) {
+        justify-content: flex-start;
+        padding-left: 20%;
+    }
+    // Form
+    &-form {
+        &-inputRegular {
+            background-color: color(form-bg);
+            color: #fff;
+            border: 2px solid color(form-bg);
+            border-radius: 20px;
+            padding: .5em 1.5em;
+            width: 90%;
+            margin: 1em 0;
+            outline: none;
+            // &::placeholder {
+            //     letter-spacing: .25em;
+            // }
+        }
+        &-message {
+            background-color: color(form-bg);
+            color: #fff;
+            border: 2px solid color(form-bg);
+            border-radius: 20px;
+            padding: .5em 1.5em;
+            margin: 1em 0;
+            height: 10em;
+            width: 100%;
+            resize: none;
+            outline: none;
+        }
+        &-message,
+        &-inputRegular {
+            transition: border 200ms ease-in-out;
+        }
+        &-message:hover,
+        &-message:focus,
+        &-inputRegular:hover,
+        &-inputRegular:focus {
+            border: 2px solid color(primary);
+        }
+        &-message::placeholder,
+        &-inputRegular::placeholder {
+            color: color(form-text);
+            letter-spacing: .25em;
+        }
+        // Button
+        &-butt {
+            margin: 1em 0;
+        }
+
+        @include media(med) {
+            &-message {
+                height: 15em;
+            }
+        }
 
     }
 }
 
+
 .contact-lower {
-    display: none;
-    background-color: color(secondary);
-    // height: 100vh;
+    background-color: color(bg);
+    padding: 0 1em;
+    ul {
+        max-width: 443px;
+        margin: 0 auto;
+        li {
+            margin: 1em 0;
+            a {
+                transition: fill 400ms ease-in-out;
+                fill: #fff;
+                &:hover,
+                &:focus {
+                fill: color(primary);
+                color: color(primary);
+                }
+            }
+            svg {
+                width: 40px;
+                margin-right: 1em;
+            }
+            span {
+                transition: color 200ms ease-in-out;
+                font-size: .9em;
+            }
+        }
+    }
     @include media(med) {
+        ul {
+            max-width: 517px;
+        }
     }
     @include media(lrg) {
-        display: block;
+        background-color: color(secondary);
+        display: flex;
+        align-items: center;
+        ul li a {
+            color: color(bg);
+            fill: color(bg);
+        }
     }
 }

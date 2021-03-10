@@ -10,6 +10,9 @@ $colors: (
     accent2: #FFCB9E,
     bg: #2E2E2E,
     bg-dark: #2D2C2C,
+
+    form-bg: #373737,
+    form-text: #797979,
 );
 
 @function color($color-name) {

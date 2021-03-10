@@ -67,7 +67,7 @@
         }
     }
     @include media (lrg) {
-        &-content {;
+        &-content {
             flex-direction: row;
             max-width: 1400px;
             justify-content: space-between;
@@ -75,15 +75,15 @@
         h1 {
             font-size: 3.5em;
         }
-        .butt {
-            
-        }
     }
 }
 
 footer {
     background-color: color(bg-dark);
+    z-index: 1;
+    position: relative;
     .footer-content {
+        font-size: .9em;
         height: 8vh;
         margin: 0 2em;
         display: flex;

@@ -40,7 +40,6 @@
     }
     @include media(lrg) {
         height: 100vh;
-        // padding
         padding-left: 20%;
         justify-items: start;
         &-container {
@@ -88,8 +87,8 @@
 
 
 .hero-lower {
-    background: color(bg);
-    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background: color(secondary);
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     height: 225px;
     width: 100%;
     @include media(med) {

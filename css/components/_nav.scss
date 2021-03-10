@@ -58,6 +58,7 @@ nav {
     background-color: color(secondary);
     list-style-type: none;
     svg {
+        width: 35px;
         margin: 1em;
         transition: fill 200ms ease-in-out;
         &:hover,
@@ -67,7 +68,7 @@ nav {
     }
     @include media(lrg) {
         display: flex;
-        padding-right: 2em;
+        padding-right: 3em;
     }
 }
 
