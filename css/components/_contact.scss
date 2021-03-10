@@ -38,36 +38,31 @@
         justify-content: flex-start;
         padding-left: 20%;
     }
+    @include media(sup) {
+        h1 {
+            font-size: 5em;
+        }
+    }
     // Form
     &-form {
-        &-inputRegular {
-            background-color: color(form-bg);
-            color: #fff;
-            border: 2px solid color(form-bg);
-            border-radius: 20px;
-            padding: .5em 1.5em;
-            width: 90%;
-            margin: 1em 0;
-            outline: none;
-            // &::placeholder {
-            //     letter-spacing: .25em;
-            // }
-        }
+        &-inputRegular,
         &-message {
             background-color: color(form-bg);
-            color: #fff;
             border: 2px solid color(form-bg);
+            transition: border 200ms ease-in-out;
+            color: #fff;
             border-radius: 20px;
             padding: .5em 1.5em;
             margin: 1em 0;
+            resize: none;
+            outline: none;        
+        }
+        &-inputRegular {
+            width: 80%;
+        }
+        &-message {
             height: 10em;
             width: 100%;
-            resize: none;
-            outline: none;
-        }
-        &-message,
-        &-inputRegular {
-            transition: border 200ms ease-in-out;
         }
         &-message:hover,
         &-message:focus,
@@ -89,6 +84,9 @@
             &-message {
                 height: 15em;
             }
+        }
+        @include media(sup) {
+
         }
 
     }
@@ -134,6 +132,11 @@
         ul li a {
             color: color(bg);
             fill: color(bg);
+        }
+    }
+    @include media(sup) {
+        ul li svg {
+            width: 50px;
         }
     }
 }

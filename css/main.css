@@ -68,8 +68,8 @@ ul {
   font-size: 16px;
   position: relative;
   z-index: 1;
-  -webkit-transition: color,scale 300ms ease-in-out;
-  transition: color,scale 300ms ease-in-out;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
   --border-size: 2px;
 }
 
@@ -103,7 +103,6 @@ ul {
 
 .butt:focus, .butt:hover {
   color: #2E2E2E;
-  scale: 1.1;
 }
 
 .butt:hover:before, .butt:focus:before {
@@ -136,9 +135,12 @@ ul {
   color: #FFAF7B;
 }
 
-.logo:hover span, .logo:focus span {
+.logo span {
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
+}
+
+.logo:hover span, .logo:focus span {
   color: #FFAF7B;
 }
 
@@ -1122,33 +1124,32 @@ footer .footer-content p {
   }
 }
 
-.contact-form-inputRegular {
-  background-color: #373737;
-  color: #fff;
-  border: 2px solid #373737;
-  border-radius: 20px;
-  padding: .5em 1.5em;
-  width: 90%;
-  margin: 1em 0;
-  outline: none;
+@media (min-width: 2200px) {
+  .contact h1 {
+    font-size: 5em;
+  }
 }
 
-.contact-form-message {
+.contact-form-inputRegular, .contact-form-message {
   background-color: #373737;
-  color: #fff;
   border: 2px solid #373737;
+  -webkit-transition: border 200ms ease-in-out;
+  transition: border 200ms ease-in-out;
+  color: #fff;
   border-radius: 20px;
   padding: .5em 1.5em;
   margin: 1em 0;
-  height: 10em;
-  width: 100%;
   resize: none;
   outline: none;
 }
 
-.contact-form-message, .contact-form-inputRegular {
-  -webkit-transition: border 200ms ease-in-out;
-  transition: border 200ms ease-in-out;
+.contact-form-inputRegular {
+  width: 80%;
+}
+
+.contact-form-message {
+  height: 10em;
+  width: 100%;
 }
 
 .contact-form-message:hover, .contact-form-message:focus, .contact-form-inputRegular:hover, .contact-form-inputRegular:focus {
@@ -1240,6 +1241,12 @@ footer .footer-content p {
   .contact-lower ul li a {
     color: #2E2E2E;
     fill: #2E2E2E;
+  }
+}
+
+@media (min-width: 2200px) {
+  .contact-lower ul li svg {
+    width: 50px;
   }
 }
 /*# sourceMappingURL=main.css.map */
