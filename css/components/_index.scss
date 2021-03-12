@@ -2,7 +2,9 @@
 //  Component Imports
 // ======================================
 
-        
+//Page Layout
+@import 'page-layout';
+
 //Nav 
 @import 'nav';
 
@@ -16,9 +18,10 @@
 @import 'projects';
 
 //About me 
-@import 'aboutme';
+@import 'about-me';
 
 //CTA
 @import 'cta';
 
+//Contact
 @import 'contact';

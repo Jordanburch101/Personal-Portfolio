@@ -1,0 +1,42 @@
+// ======================================
+//  About me Section
+// =====================================
+
+.aboutMe {
+    max-width: 80%;
+    &-images {margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+    &-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3em;
+        img {
+            max-width: 250px;
+        }
+        p {
+           margin: 1em 0;
+            text-align: center;
+            color: color(form-text);
+        }
+    }
+
+    @include media(med) {
+        max-width: 60%;
+        &-images {
+            flex-direction: row;
+        }
+    }
+
+    @include media(lrg) {
+        max-width: 800px;
+        &-image {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+}

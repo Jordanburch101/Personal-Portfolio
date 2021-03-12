@@ -5,7 +5,7 @@
 .feature {
     background: color(secondary);
     background: linear-gradient(180deg, color(secondary) 0%, color(primary) 100%);
-    padding: 150px 0;
+    padding: 100px 0;
     &-container {
         width: 90%;
         max-width: 400px;
@@ -65,6 +65,7 @@
         }
     }
     @include media(lrg) {
+        padding: 150px 0;
         &-container {
             max-width: 1400px;
             display: grid;
