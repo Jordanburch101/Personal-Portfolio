@@ -415,7 +415,7 @@ ul.dropdown-menu.show {
 }
 
 .hero {
-  height: 50vh;
+  height: 50 .hero;
   background: #2E2E2E;
   color: #fff;
   display: -ms-grid;
@@ -521,13 +521,13 @@ ul.dropdown-menu.show {
   background: #E8CBC0;
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
           clip-path: polygon(100% 100%, 0% 100%, 100% 0);
-  height: 20vh;
+  height: 30vh;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .hero-lower {
-    height: 50vh;
+    height: 40vh;
   }
 }
 
