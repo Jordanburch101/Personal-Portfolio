@@ -3,7 +3,6 @@
 // =====================================
 
 .secondary-container {
-    // height: 100vh;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -55,12 +54,12 @@
     background-color: color(bg);
     padding: 0 1em;
     ul {
+        max-width: 443px;
+        margin: 2em auto;
         h3 {
             color: #fff;
             margin-bottom: 1em;
         }
-        max-width: 443px;
-        margin: 0 auto;
         li {
             margin: 1em 0;
             a {
@@ -85,7 +84,7 @@
     }
     @include media(med) {
         ul {
-            max-width: 517px;
+            max-width: 60%;
         }
     }
     @include media(lrg) {

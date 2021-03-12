@@ -219,7 +219,7 @@ ul {
 
 .secondary-lower ul {
   max-width: 443px;
-  margin: 0 auto;
+  margin: 2em auto;
 }
 
 .secondary-lower ul h3 {
@@ -256,7 +256,7 @@ ul {
 
 @media (min-width: 768px) {
   .secondary-lower ul {
-    max-width: 517px;
+    max-width: 60%;
   }
 }
 
@@ -875,6 +875,15 @@ ul.dropdown-menu.show {
 
 .aboutMe-image img {
   max-width: 250px;
+  border-radius: 10px;
+  border: 2px #2E2E2E solid;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.aboutMe-image img:hover {
+  scale: 1.1;
+  border: 2px #636FA4 solid;
 }
 
 .aboutMe-image p {

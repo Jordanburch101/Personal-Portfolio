@@ -16,6 +16,13 @@
         margin-right: 3em;
         img {
             max-width: 250px;
+            border-radius: 10px;
+            border: 2px color(bg) solid;
+            transition: all 300ms ease-in-out;
+            &:hover {
+                scale: 1.1;
+                border: 2px color(primary) solid;
+            }
         }
         p {
            margin: 1em 0;
