@@ -1,13 +1,42 @@
+.transition-fade {
+  opacity: 1;
+  -webkit-transition: 700ms;
+  transition: 700ms;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+html.is-animating .transition-fade {
+  opacity: 1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 body {
   height: 100vh;
   margin: 0;
   background-color: #2E2E2E;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 a {
@@ -252,12 +281,6 @@ ul {
   transition: color 200ms ease-in-out;
   font-size: 1em;
   letter-spacing: .15em;
-}
-
-@media (min-width: 768px) {
-  .secondary-lower ul {
-    max-width: 60%;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -559,7 +582,7 @@ ul.dropdown-menu.show {
 
 @media (min-width: 1400px) {
   .hero-svg {
-    top: 30%;
+    top: 5%;
     left: 55%;
     max-width: 650px;
     margin: 0;

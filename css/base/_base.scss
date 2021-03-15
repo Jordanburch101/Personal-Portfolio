@@ -7,10 +7,17 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
 body {
     height: 100vh;
     margin: 0;
     background-color: color(bg);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 a { 

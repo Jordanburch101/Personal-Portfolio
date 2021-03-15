@@ -82,11 +82,6 @@
             }
         }
     }
-    @include media(med) {
-        ul {
-            max-width: 60%;
-        }
-    }
     @include media(lrg) {
         background-color: color(secondary);
         display: flex;
