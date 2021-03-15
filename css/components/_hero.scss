@@ -2,7 +2,7 @@
 //  Hero Section
 // ======================================
 .hero {
-    height: 50&;
+    // height: 50%;
     background: color(bg);
     color: #fff;
     display: grid;
@@ -89,10 +89,10 @@
 .hero-lower {
     background: color(secondary);
     clip-path: polygon(100% 100%, 0% 100%, 100% 0);
-    height: 30vh;
+    height: 250px;
     width: 100%;
     @include media(med) {
-        height: 40vh;
+        height: 300px;
     }
     @include media(lrg) {
         background-color: color(secondary);
@@ -111,7 +111,6 @@
     margin-right: auto;
     max-width: 350px;
     @include media(med) {
-        top: 60%;
         max-width: 400px;
     }
     @include media(lrg) {
