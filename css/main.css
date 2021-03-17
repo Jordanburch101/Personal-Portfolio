@@ -65,7 +65,7 @@ h2 {
   font-weight: 400;
   letter-spacing: .18em;
   line-height: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   color: white;
 }
 
@@ -172,6 +172,10 @@ ul {
 
 .logo:hover span, .logo:focus span {
   color: #FFAF7B;
+}
+
+.tech {
+  color: #FFCB9E;
 }
 
 .secondary-container {
