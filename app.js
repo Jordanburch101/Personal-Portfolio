@@ -15,7 +15,16 @@ function heroAnimation() {
 
 }
 function contactAnimation() {
-    
+    gsap.from('.secondary-title', {opacity: 0, duration: 1, x: -100, delay: .5});
+    gsap.from('.subtitle', {opacity: 0, duration: 1, y: -30, delay: 1});
+    gsap.from('.secondary-lower ul', {opacity: 0, duration: 2, x: "100%", delay: .5});
+    gsap.from('.contact-form', {opacity: 0, duration: 1, y: 0, delay: 1.5});
+}
+function aboutMeAnimation() {
+    gsap.from('.secondary-title', {opacity: 0, duration: 1, x: -100, delay: .5});
+    gsap.from('.subtitle', {opacity: 0, duration: 1, y: -30, delay: 1});
+    gsap.from('.secondary-lower ul', {opacity: 0, duration: 2, x: "100%", delay: .5});
+    gsap.from('.abMe-ani', {opacity: 0, duration: 2, y: 0, delay: 1.5});
 }
 
 
@@ -35,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if(page === "contact.html") {
             contactAnimation();
+        }
+        if(page === "aboutMe.html") {
+            aboutMeAnimation();
         }
     }
     
