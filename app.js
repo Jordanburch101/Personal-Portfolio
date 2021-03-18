@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(page === "contact") {
             contactAnimation();
         }
-        if(page === "aboutMe") {
+        if(page === "aboutme") {
             aboutMeAnimation();
         }
     }
