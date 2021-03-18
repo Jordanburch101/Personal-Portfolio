@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const page = path.split("/").pop();
         console.log( page );
 
-        if(page === "index.html") {
+        if(page === "") {
             heroAnimation();
         }
-        if(page === "contact.html") {
+        if(page === "contact") {
             contactAnimation();
         }
-        if(page === "aboutMe.html") {
+        if(page === "aboutMe") {
             aboutMeAnimation();
         }
     }
