@@ -3,138 +3,135 @@
 // ======================================
 
 * {
-    font-family: $font-primary;
-    box-sizing: border-box;
+  font-family: $font-primary;
+  box-sizing: border-box;
 }
 
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 body {
-    height: 100vh;
-    margin: 0;
-    background-color: color(bg);
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  height: 100vh;
+  margin: 0;
+  background-color: color(bg);
 }
 
-a { 
-    outline: none;
-    text-decoration: none;
-    // font-size: 1.2em;
-    color: #fff;
-    transition: color 200ms ease-in-out;
-    &:hover, 
-    &:focus {
-        color: color(accent);
-    }
+a {
+  outline: none;
+  text-decoration: none;
+  // font-size: 1.2em;
+  color: #fff;
+  transition: color 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    color: color(accent);
+  }
 }
 
 h1 {
-    font-size: 2.5em;
-    font-weight: 400;
-    letter-spacing: .25em;
-    line-height: 1.8em;
-    margin-top: 1em;
-    color: #fff;
+  font-size: 2.5em;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  line-height: 1.8em;
+  margin-top: 1em;
+  color: #fff;
 }
 
 h2 {
-    font-size: 2.3em;
-    font-weight: 400;
-    letter-spacing: .18em;
-    line-height: 2em;
-    margin-bottom: 1em;
-    color: white;
+  font-size: 2.3em;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 2em;
+  margin-bottom: 1em;
+  color: white;
 }
+
 h3 {
-    font-size: 2em;
-    font-weight: 400;
-    letter-spacing: .15em;
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 // Button styles
 .butt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  transition: color 300ms ease-in-out;
+  --border-size: 2px;
+  &-primary {
+    color: #fff;
+    background: color(primary);
+  }
+  &-secondary {
+    background: #fff;
+    color: color(bg);
+  }
+  // Animations
+  &:before {
+    content: "";
+    position: absolute;
     border-radius: 20px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    position: relative;
-    z-index: 1;
-    transition: color 300ms ease-in-out;
-    --border-size: 2px;
-    &-primary {
-        color: #fff;
-        background: color(primary);
-    }
-    &-secondary {
-        background: #fff;
-        color: color(bg);
-    }
-    // Animations
-    &:before {
-        content: '';
-        position: absolute;
-        border-radius: 20px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background-color: color(accent);
-        transition: transform 300ms ease-in-out;
-        transform: scaleX(0);
-    }
-    &:focus,
-    &:hover {
-        color: color(bg);
-    }
-    &:hover:before,
-    &:focus:before {
-        transform: scaleX(1);
-    }
-    @include media(sup) {
-        width: 200px;
-        height: 50px;
-        border-radius: 30px;
-        font-size: 20px;
-    }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: color(accent);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+  }
+  &:focus,
+  &:hover {
+    color: color(bg);
+  }
+  &:hover:before,
+  &:focus:before {
+    transform: scaleX(1);
+  }
+  @include media(sup) {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+  }
 }
 
 // Logo
 .logo {
-    &-first {
-        color: color(secondary);
-    }
-    &-last {
-        color: color(primary);
-    }
-    &-start {
-        color: color(accent);
-    }
-    &-end {
-        color: color(accent);
-    }
+  &-first {
+    color: color(secondary);
+  }
+  &-last {
+    color: color(primary);
+  }
+  &-start {
+    color: color(accent);
+  }
+  &-end {
+    color: color(accent);
+  }
+  span {
+    transition: color 200ms ease-in-out;
+  }
+  &:hover,
+  &:focus {
     span {
-        transition: color 200ms ease-in-out;
+      color: color(accent);
     }
-    &:hover,
-    &:focus {
-        span {
-            color: color(accent);
-        }
-    }
-
+  }
 }
-

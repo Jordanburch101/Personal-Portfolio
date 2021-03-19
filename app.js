@@ -14,11 +14,11 @@ window.addEventListener('load', function () {
 //////////////////////////////
 function heroAnimation() {
     console.log('DOM fully loaded and parsed');
-    gsap.from('#svg-phone', {opacity: 0, duration: 3, x: 1550, ease: "power3.out", delay: 1});
-    gsap.from('#svg-monitor', {opacity: 0, duration: 3, x: 550, ease: "power3.out", delay: .5});
+    gsap.from('#svg-phone', {opacity: 0, duration: 2, x: 1550, ease: "power3.out", delay: .5});
+    gsap.from('#svg-monitor', {opacity: 0, duration: 2, x: 550, ease: "power3.out", delay: .2});
     gsap.from('.hero-text', {opacity: 0, duration: 2, y: -100, delay: .2});
     gsap.from('.hero-tagline', {opacity: 0, duration: 2, y: -50, ease: "power3.out", delay: 1});
-    gsap.from('.hero-cta', {opacity: 0, duration: 2, x: -500, ease: "power3.out", delay: 2});
+    gsap.from('.hero-cta', {opacity: 0, duration: 2, x: -500, ease: "power3.out", delay: 1.5});
     gsap.from('.hero-buttons', {opacity: 0, duration: 2, y: -50, ease: "power1.out", delay: 1.5});
 
 }
@@ -33,6 +33,11 @@ function aboutMeAnimation() {
     gsap.from('.subtitle', {opacity: 0, duration: 1, y: -30, delay: 1});
     gsap.from('.secondary-lower ul', {opacity: 0, duration: 2, x: "100%", delay: .5});
     gsap.from('.abMe-ani', {opacity: 0, duration: 2, y: 0, delay: 1.5});
+}
+function resumeAnimation() {
+    gsap.from('.secondary-title', {opacity: 0, duration: 1, x: -100, delay: .5});
+    gsap.from('.subtitle', {opacity: 0, duration: 1, y: -30, delay: 1});
+    gsap.from('.secondary-lower ul', {opacity: 0, duration: 2, x: "100%", delay: .5});
 }
 
 
@@ -56,9 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if(page === "aboutMe.html") {
             aboutMeAnimation();
         }
+        if(page === "resume.html") {
+            resumeAnimation();
+        }
     }
     
-
     const swup = new Swup();
         init();
     swup.on('contentReplaced', init);

@@ -99,10 +99,6 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #2E2E2E;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
 }
 
 a {
@@ -120,7 +116,7 @@ a:hover, a:focus {
 h1 {
   font-size: 2.5em;
   font-weight: 400;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
   line-height: 1.8em;
   margin-top: 1em;
   color: #fff;
@@ -129,7 +125,7 @@ h1 {
 h2 {
   font-size: 2.3em;
   font-weight: 400;
-  letter-spacing: .18em;
+  letter-spacing: 0.18em;
   line-height: 2em;
   margin-bottom: 1em;
   color: white;
@@ -138,7 +134,7 @@ h2 {
 h3 {
   font-size: 2em;
   font-weight: 400;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 ul {
@@ -180,7 +176,7 @@ ul {
 }
 
 .butt:before {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 20px;
   top: 0;
@@ -685,28 +681,24 @@ ul.dropdown-menu.show {
 .feature-title {
   text-align: center;
   grid-area: title;
-}
-
-.feature-title hr {
-  height: 5px;
-  border-radius: 10px;
-  margin: auto;
+  border-bottom: 5px rgba(255, 255, 255, 0.329) solid;
+  border-radius: 2px;
 }
 
 .feature-subtitle {
   color: #636FA4;
   margin-bottom: 0;
-  letter-spacing: .35em;
+  letter-spacing: 0.35em;
 }
 
 .feature-title2 {
   font-size: 1.3em;
   font-weight: 400;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 
 .feature-description {
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 2em;
 }
 
@@ -766,7 +758,7 @@ ul.dropdown-menu.show {
     margin-right: auto;
     margin-top: 0;
     font-size: 3.5em;
-    letter-spacing: .30em;
+    letter-spacing: 0.3em;
     text-align: start;
   }
 }
@@ -971,7 +963,6 @@ ul.dropdown-menu.show {
 }
 
 .aboutMe-image img:hover {
-  scale: 1.1;
   border: 2px #636FA4 solid;
 }
 
