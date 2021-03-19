@@ -1,4 +1,8 @@
+let spinnerWrapper = document.querySelector('.loader-wrapper');
 
+window.addEventListener('load', function () {
+    spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+});
 
 
 ///////////////////////////////
@@ -6,7 +10,7 @@
 //////////////////////////////
 function heroAnimation() {
     console.log('DOM fully loaded and parsed');
-    gsap.from('#svg-phone', {opacity: 0, duration: 3, x: 1550, ease: "power3.out", delay: 3});
+    gsap.from('#svg-phone', {opacity: 0, duration: 3, x: 1550, ease: "power3.out", delay: 1});
     gsap.from('#svg-monitor', {opacity: 0, duration: 3, x: 550, ease: "power3.out", delay: .5});
     gsap.from('.hero-text', {opacity: 0, duration: 2, y: -100, delay: .2});
     gsap.from('.hero-tagline', {opacity: 0, duration: 2, y: -50, ease: "power3.out", delay: 1});
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const page = path.split("/").pop();
         console.log( page );
 
-        if(page === "") {
+        if(page === "index.html") {
             heroAnimation();
         }
         if(page === "contact") {

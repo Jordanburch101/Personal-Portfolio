@@ -18,6 +18,72 @@ html.is-leaving .transition-fade {
   opacity: 0;
 }
 
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #2E2E2E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.loader::before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.loader:before {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#636FA4), to(#E8CBC0));
+  background-image: linear-gradient(90deg, #636FA4 0%, #E8CBC0 100%);
+  -webkit-animation: spin 0.5s infinite linear;
+          animation: spin 0.5s infinite linear;
+}
+
+.loader:after {
+  width: 90%;
+  height: 90%;
+  background-color: #2E2E2E;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 * {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
