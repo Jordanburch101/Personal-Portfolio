@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const page = path.split("/").pop();
         console.log( page );
 
-        if(page === "index.html" || "") {
+        if(page === "index.html" || page === "") {
             heroAnimation();
         }
         if(page === "contact.html") {
