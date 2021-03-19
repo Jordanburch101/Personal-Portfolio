@@ -1,4 +1,8 @@
-let spinnerWrapper = document.querySelector('.loader-wrapper');
+///////////////////////////////
+/////////// Loader ////////////
+//////////////////////////////
+
+let spinnerWrapper = document.querySelector('.loader-wrapper')
 
 window.addEventListener('load', function () {
     spinnerWrapper.parentElement.removeChild(spinnerWrapper);
@@ -43,13 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const page = path.split("/").pop();
         console.log( page );
 
-        if(page === "") {
+        if(page === "index.htlm") {
             heroAnimation();
         }
-        if(page === "contact") {
+        if(page === "contact.html") {
             contactAnimation();
         }
-        if(page === "aboutme") {
+        if(page === "aboutMe.html") {
             aboutMeAnimation();
         }
     }
