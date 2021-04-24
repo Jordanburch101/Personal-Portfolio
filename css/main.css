@@ -1210,13 +1210,14 @@ footer .footer-content p {
 
 @media (min-width: 768px) {
   .resume {
-    width: 517px;
+    max-width: 517px;
   }
 }
 
 @media (min-width: 1400px) {
   .resume {
     margin-bottom: 5em;
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
