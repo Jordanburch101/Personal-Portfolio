@@ -30,9 +30,8 @@
       color: color(form-text);
     }
   }
-
   @include media(med) {
-    max-width: 60%;
+    max-width: 517px;
     &-images {
       flex-direction: row;
     }

@@ -6,11 +6,14 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
+  height: 84vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   @include media(med) {
   }
   @include media(lrg) {
+    overflow: hidden;
     grid-template-columns: 70% 30%;
-    height: 84vh;
   }
 }
 
@@ -19,9 +22,9 @@
   justify-content: center;
   align-items: center;
   background: color(bg);
-  // Content
   &-content {
     margin: 0 1em;
+
     h1 {
       font-size: 3em;
     }
@@ -54,7 +57,7 @@
   background-color: color(bg);
   padding: 0 1em;
   ul {
-    max-width: 443px;
+    max-width: 517px;
     margin: 2em auto;
     h3 {
       color: #fff;
@@ -81,6 +84,10 @@
         letter-spacing: 0.15em;
       }
     }
+  }
+  @include media(med) {
+    // max-width: 100%;
+    // margin: 0 auto;
   }
   @include media(lrg) {
     background-color: color(secondary);

@@ -1,0 +1,21 @@
+// ======================================
+//  Resume
+// ======================================
+
+.resume {
+  img {
+    width: 60%;
+  }
+  &-butt {
+    margin-top: 3em;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+  }
+  @include media(med) {
+    width: 517px;
+  }
+  @include media(lrg) {
+    margin-bottom: 5em;
+  }
+}

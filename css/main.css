@@ -91,7 +91,7 @@ html.is-leaving .transition-fade {
 }
 
 html {
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
 }
 
@@ -116,7 +116,7 @@ a:hover, a:focus {
 h1 {
   font-size: 2.5em;
   font-weight: 400;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   line-height: 1.8em;
   margin-top: 1em;
   color: #fff;
@@ -243,13 +243,16 @@ ul {
       grid-template-columns: 100%;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+  height: 84vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media (min-width: 1400px) {
   .secondary-container {
+    overflow: hidden;
     -ms-grid-columns: 70% 30%;
         grid-template-columns: 70% 30%;
-    height: 84vh;
   }
 }
 
@@ -311,7 +314,7 @@ ul {
 }
 
 .secondary-lower ul {
-  max-width: 443px;
+  max-width: 517px;
   margin: 2em auto;
 }
 
@@ -975,7 +978,7 @@ ul.dropdown-menu.show {
 
 @media (min-width: 768px) {
   .aboutMe {
-    max-width: 60%;
+    max-width: 517px;
   }
   .aboutMe-images {
     -webkit-box-orient: horizontal;
@@ -1141,7 +1144,7 @@ footer .footer-content p {
   transition: border 200ms ease-in-out;
   color: #fff;
   border-radius: 20px;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
   margin: 1em 0;
   resize: none;
   outline: none;
@@ -1162,22 +1165,22 @@ footer .footer-content p {
 
 .contact-form-message::-webkit-input-placeholder, .contact-form-inputRegular::-webkit-input-placeholder {
   color: #797979;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
 }
 
 .contact-form-message:-ms-input-placeholder, .contact-form-inputRegular:-ms-input-placeholder {
   color: #797979;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
 }
 
 .contact-form-message::-ms-input-placeholder, .contact-form-inputRegular::-ms-input-placeholder {
   color: #797979;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
 }
 
 .contact-form-message::placeholder, .contact-form-inputRegular::placeholder {
   color: #797979;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
 }
 
 .contact-form-butt {
@@ -1187,6 +1190,33 @@ footer .footer-content p {
 @media (min-width: 768px) {
   .contact-form-message {
     height: 15em;
+  }
+}
+
+.resume img {
+  width: 60%;
+}
+
+.resume-butt {
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .resume {
+    width: 517px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .resume {
+    margin-bottom: 5em;
   }
 }
 /*# sourceMappingURL=main.css.map */

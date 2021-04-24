@@ -20,7 +20,6 @@ function heroAnimation() {
     gsap.from('.hero-tagline', {opacity: 0, duration: 2, y: -50, ease: "power3.out", delay: 1});
     gsap.from('.hero-cta', {opacity: 0, duration: 2, x: -500, ease: "power3.out", delay: 1.5});
     gsap.from('.hero-buttons', {opacity: 0, duration: 2, y: -50, ease: "power1.out", delay: 1.5});
-
 }
 function contactAnimation() {
     gsap.from('.secondary-title', {opacity: 0, duration: 1, x: -100, delay: .5});
@@ -37,6 +36,7 @@ function aboutMeAnimation() {
 function resumeAnimation() {
     gsap.from('.secondary-title', {opacity: 0, duration: 1, x: -100, delay: .5});
     gsap.from('.subtitle', {opacity: 0, duration: 1, y: -30, delay: 1});
+    gsap.from('.resume-butt', {opacity: 0, duration: 2, y: 0, delay: 1.5});
     gsap.from('.secondary-lower ul', {opacity: 0, duration: 2, x: "100%", delay: .5});
 }
 
@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(page === "resume.html") {
             resumeAnimation();
         }
+        
     }
     
     const swup = new Swup();

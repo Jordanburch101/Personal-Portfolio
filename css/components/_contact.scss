@@ -2,50 +2,45 @@
 //  Contact Section
 // =====================================
 
-
 .contact-form {
-    &-inputRegular,
+  &-inputRegular,
+  &-message {
+    background-color: color(form-bg);
+    border: 2px solid color(form-bg);
+    transition: border 200ms ease-in-out;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.5em 1.5em;
+    margin: 1em 0;
+    resize: none;
+    outline: none;
+  }
+  &-inputRegular {
+    width: 80%;
+  }
+  &-message {
+    height: 10em;
+    width: 100%;
+  }
+  &-message:hover,
+  &-message:focus,
+  &-inputRegular:hover,
+  &-inputRegular:focus {
+    border: 2px solid color(primary);
+  }
+  &-message::placeholder,
+  &-inputRegular::placeholder {
+    color: color(form-text);
+    letter-spacing: 0.25em;
+  }
+  // Button
+  &-butt {
+    margin: 1em 0;
+  }
+
+  @include media(med) {
     &-message {
-        background-color: color(form-bg);
-        border: 2px solid color(form-bg);
-        transition: border 200ms ease-in-out;
-        color: #fff;
-        border-radius: 20px;
-        padding: .5em 1.5em;
-        margin: 1em 0;
-        resize: none;
-        outline: none;        
+      height: 15em;
     }
-    &-inputRegular {
-        width: 80%;
-    }
-    &-message {
-        height: 10em;
-        width: 100%;
-    }
-    &-message:hover,
-    &-message:focus,
-    &-inputRegular:hover,
-    &-inputRegular:focus {
-        border: 2px solid color(primary);
-    }
-    &-message::placeholder,
-    &-inputRegular::placeholder {
-        color: color(form-text);
-        letter-spacing: .25em;
-    }
-    // Button
-    &-butt {
-        margin: 1em 0;
-    }
-
-    @include media(med) {
-        &-message {
-            height: 15em;
-        }
-    }
-    @include media(sup) {
-
-    }
-
+  }
 }
