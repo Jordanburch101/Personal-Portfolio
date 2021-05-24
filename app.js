@@ -13,7 +13,6 @@ window.addEventListener('load', function () {
 /////////// GSAP ////////////
 //////////////////////////////
 function heroAnimation() {
-    console.log('DOM fully loaded and parsed');
     gsap.from('#svg-phone', {opacity: 0, duration: 2, x: 1550, ease: "power3.out", delay: .5});
     gsap.from('#svg-monitor', {opacity: 0, duration: 2, x: 550, ease: "power3.out", delay: .2});
     gsap.from('.hero-text', {opacity: 0, duration: 2, y: -100, delay: .2});
@@ -71,4 +70,3 @@ document.addEventListener("DOMContentLoaded", () => {
         init();
     swup.on('contentReplaced', init);
 });
-

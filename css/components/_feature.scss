@@ -23,9 +23,10 @@
     border-radius: 2px;
   }
   &-subtitle {
-    color: color(primary);
+    color: color(bg);
     margin-bottom: 0;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.25em;
+    font-size: 0.9em;
   }
   &-title2 {
     font-size: 1.3em;

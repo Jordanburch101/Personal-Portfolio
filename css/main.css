@@ -690,9 +690,10 @@ ul.dropdown-menu.show {
 }
 
 .feature-subtitle {
-  color: #636FA4;
+  color: #2E2E2E;
   margin-bottom: 0;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.25em;
+  font-size: 0.9em;
 }
 
 .feature-title2 {
