@@ -3,6 +3,7 @@
 // =====================================
 
 .contact-form {
+  display: none;
   &-inputRegular,
   &-message {
     background-color: color(form-bg);
